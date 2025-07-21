@@ -1,0 +1,83 @@
+/* Global Typography and Colors */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #212529;
+}
+
+a, a:link, a:visited {
+  color: #7336f7;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Course Grid Container */
+.course-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+/* Course Cards */
+.course-card {
+  flex: 1 1 calc(33.333% - 1.5rem);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1.25rem;
+  box-sizing: border-box;
+  text-align: center;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.course-card:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+}
+
+/* Card Title */
+.course-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #7336f7;
+  margin-bottom: 0.75rem;
+}
+
+/* Access Button */
+.course-card a.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #7336f7;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.course-card a.button:hover {
+  background-color: #5d2fcb;
+  text-decoration: none;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  .course-card {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .course-card {
+    flex: 1 1 100%;
+  }
+}
