@@ -9,9 +9,74 @@ type: article
 {%- assign _sharing = __return -%}
 
 <div class="layout--article">
-  {%- include article/top/custom.html -%}
+  {% include article/top/custom.html -%}
 
-  <div class="article__content" itemprop="articleBody">{{ content }}</div>
+   <div class="subjects">
+      <div class="search-wrapper">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="course-search" placeholder="Search..." />
+        <i class="fas fa-times clear-icon" id="clear-search"></i>
+      </div>
+      <!-- Filter Logic Starts here-->
+       {% assign collections = site.data.collections %}
+       <!--<p>{{collections}}</p>
+       <p> size is {{collections |size }}</p>-->
+       {% assign dataset = "courseInformation" %}
+       {% assign collection = "courses" %}
+       <!--<p>akash : {{ site.data["courseInformation"]["courses"] | size }} items loaded</p>-->
+        {% assign filtersToShow = "subjects,platform,sw-hw,level,publisher" | split: "," %}
+
+        {% for coll in collections %} <!-- need to make it customizable -->
+          <!--<p>coll is {{ coll}} </p>
+          <p>Dataset: {{ coll.dataset }}</p>
+          <p>Key: {{ coll.key }}</p>
+          <p>Item count: {{ site.data["courseInformation"]["courses"] | size }}</p>-->
+          {% assign items = site.data["courseInformation"]["courses"] %}
+ 
+          <h2>{{ coll.key | capitalize }}</h2>
+          <div class="filter-wrapper">
+          {% for filterType in filtersToShow %}
+            <div class="filter">
+              <strong>{{ filterType | capitalize }}:</strong>
+
+              {% assign options = "" | split: "" %}
+
+              {% for item in items %}
+                {% assign values = item[filterType] %}
+                {% if values %}
+                  {% for val in values %}
+                    {% unless options contains val %}
+                      {% assign options = options | push: val %}
+                    {% endunless %}
+                  {% endfor %}
+                {% endif %}
+              {% endfor %}
+
+              {% for option in options %}
+                <label>
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    data-category="{{ filterType }}"
+                    value="{{ option }}"
+                    onchange="filterCourses()"
+                  >
+                  {{ option }}
+                </label>
+              {% endfor %}
+            </div>
+          {% endfor %}
+          </div>
+        {% endfor %}
+      <!--Filter Logic Ends here-->
+
+
+  </div>
+
+
+  <div class="article__content" itemprop="articleBody">{{ content }}</div> 
+
+
 
   {%- if _sharing -%}
     <section class="article__sharing d-print-none">{%- include sharing.html -%}</section>
@@ -24,6 +89,48 @@ type: article
 
 </div>
 
+<script src="{{ '/assets/search.js' | relative_url }}"></script>
+<link rel="stylesheet" href="{{ '/assets/css/search.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/filter.css' | relative_url }}">
+
+
+
+
 <script>
-  {%- include scripts/article.js -%}
+function filterCourses() {
+  const checkboxes = document.querySelectorAll('.filter-checkbox:checked');
+  const cards = document.querySelectorAll('.course-card');
+
+
+  const selected = {};
+  for (let i = 0; i < checkboxes.length; i++) {
+    const cb = checkboxes[i];
+    const cat = cb.dataset.category;
+    if (!selected[cat]) selected[cat] = [];
+    selected[cat].push(cb.value.toLowerCase());
+  }
+
+  for (let i = 0; i < cards.length; i++) {
+    const card = cards[i];
+    const keywords = (card.dataset.keywords || "").toLowerCase();
+
+    let visible = true;
+    for (let category in selected) {
+      const values = selected[category];
+      let match = false;
+      for (let j = 0; j < values.length; j++) {
+        if (keywords.includes(values[j])) {
+          match = true;
+          break;
+        }
+      }
+      if (!match) {
+        visible = false;
+        break;
+      }
+    }
+
+    card.style.display = visible ? "block" : "none";
+  }
+}
 </script>

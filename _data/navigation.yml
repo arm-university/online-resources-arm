@@ -1,2 +1,79 @@
 header:
-  []
+  title: Arm Course Page
+projects:
+- title: Projects
+  children:
+  - title: Embedded Systems Essentials withb arm - Getting Started
+    description: To be Added.
+    url: https://www.edx.org/learn/embedded-systems/arm-education-embedded-systems-essentials-with-arm-getting-started
+    subjects:
+    - Embedded Systems
+    platform:
+    - IoT
+    sw-hw:
+    - Hardware
+    level:
+    - Beginner
+    status:
+    - Published
+- title: Projects
+  children:
+  - title: Embedded Systems Essentials withb arm - get practical with Hardware
+    description: To be Added.
+    url: https://www.edx.org/learn/embedded-systems/arm-education-embedded-systems-essentials-with-arm-get-practical-with-hardware
+    subjects:
+    - Embedded Systems
+    platform:
+    - IoT
+    sw-hw:
+    - Hardware
+    level:
+    - intermediate
+    status:
+    - Published
+- title: Projects
+  children:
+  - title: Build your First Internet of Things (IoT) Application with Arm 
+    description: To be Added.
+    url: https://www.edx.org/learn/app-development/arm-education-build-your-first-internet-of-things-iot-application-on-arm
+    subjects:
+    - Embedded Systems
+    platform:
+    - IoT
+    sw-hw:
+    - Hardware
+    level:
+    - intermediate
+    status:
+    - Published
+- title: Projects
+  children:
+  - title: Introduction to Microprocessors 
+    description: To be Added.
+    url: [https://www.edx.org/learn/computer-architecture/arm-education-introduction-to-microprocessors,https://www.coursera.org/learn/arm-education-introduction-to-microprocessors]
+    subjects:
+    - Microprocessors
+    platform:
+    - IoT
+    sw-hw:
+    - Hardware
+    level:
+    - intermediate
+    status:
+    - Published
+- title: Projects
+  children:
+  - title: computer architecture Essentials on Arm 
+    description: To be Added.
+    url: [https://www.edx.org/learn/computer-architecture/arm-education-introduction-to-microprocessors,https://www.coursera.org/learn/arm-education-introduction-to-microprocessors]
+    subjects:
+    - Microprocessors
+    platform:
+    - IoT
+    sw-hw:
+    - Software
+    level:
+    - intermediate
+    status:
+    - Published
+
