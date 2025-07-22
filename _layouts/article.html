@@ -59,7 +59,6 @@ type: article
                     class="filter-checkbox"
                     data-category="{{ filterType }}"
                     value="{{ option }}"
-                    onchange="filterCourses()"
                   >
                   {{ option }}
                 </label>
@@ -93,44 +92,3 @@ type: article
 <link rel="stylesheet" href="{{ '/assets/css/search.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/filter.css' | relative_url }}">
 
-
-
-
-<script>
-function filterCourses() {
-  const checkboxes = document.querySelectorAll('.filter-checkbox:checked');
-  const cards = document.querySelectorAll('.course-card');
-
-
-  const selected = {};
-  for (let i = 0; i < checkboxes.length; i++) {
-    const cb = checkboxes[i];
-    const cat = cb.dataset.category;
-    if (!selected[cat]) selected[cat] = [];
-    selected[cat].push(cb.value.toLowerCase());
-  }
-
-  for (let i = 0; i < cards.length; i++) {
-    const card = cards[i];
-    const keywords = (card.dataset.keywords || "").toLowerCase();
-
-    let visible = true;
-    for (let category in selected) {
-      const values = selected[category];
-      let match = false;
-      for (let j = 0; j < values.length; j++) {
-        if (keywords.includes(values[j])) {
-          match = true;
-          break;
-        }
-      }
-      if (!match) {
-        visible = false;
-        break;
-      }
-    }
-
-    card.style.display = visible ? "block" : "none";
-  }
-}
-</script>
