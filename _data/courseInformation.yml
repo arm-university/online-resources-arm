@@ -1,0 +1,289 @@
+header:
+  title: Arm Course Page.
+
+courses:
+  - title: Embedded Systems Essentials with Arm - Getting Started
+    description: |
+      "Embedded systems are everywhere – and Arm-based technologies are the industry standard. Getting started could not be easier. This course includes instructions on how to access to an Mbed simulator (refer to the prerequisites section for more details) so you can apply your new knowledge and skills to prototype and build real-world embedded applications quickly, without the trouble or expense of sourcing hardware.
+                      From the mobile, wearable, and smart devices of today to the transformative Artificial Intelligence (AI) and 5G powered Internet of Things (IoT) of the near future, embedded systems are the fundamental building blocks of our connected world. As we move from billions to trillions of intelligent, connected devices, it’s crucial that the next generation of engineers have a thorough understanding of how to rapidly build and deploy a modern embedded system solution.
+                      In this course, you will learn the fundamentals of an embedded system and discover why the Arm architecture and processors are particularly well suited for IoT applications.
+                      Our interactive labs have been designed to cover the technical fundamentals, developing in-demand skills essential for any aspiring embedded systems engineer.
+                      You will begin by learning the characteristics of an embedded system, its components, benefits, and constraints, identify cost-performance trade-offs, and explore why the Arm architecture and processors are particularly well suited for the IoT.
+                      You will then apply your new knowledge of digital and analog I/O, interrupts, low power features, timer and pulse width modulation to program an audio wave generator and audio player, and control peripherals along the way.
+                      All of this will be supported by the Mbed API – so no additional hardware is required, you can download and use the simulator right on your own computer.
+                      Over the six modules, you will gain a key overview of:
+                      Embedded systems and their importance in modern computing applications
+                      Industry-standard Arm-based microcontroller architecture, their features and programming models.
+                      The possibilities for future IoT development and connection are enormous. In order to achieve this vision of the future, many engineers and developers will be needed to imagine and design these connected devices and the technologies they are built on.
+                      The world of embedded systems is your doorway into the IoT, and all the opportunities it has to offer."
+    url: https://www.edx.org/learn/embedded-systems/arm-education-embedded-systems-essentials-with-arm-getting-started
+    subjects: ["Embedded systems hardware & firmware"]
+    platform: ["IoT"]
+    sw-hw: ["Software"]
+    level: ["Beginner"]
+    publisher: ["Arm Education"]
+
+  - title: Embedded Systems Essentials with Arm - Get Practical with Hardware
+    description: |
+      Embedded systems are the fundamental building blocks of our connected world, and Arm-based devices are   the industry standard. This course will provide you with the   practical skills and confidence to build your own embedded system using the popular and affordable ST Nucleo F401RE development board.
+                    You can purchase all the bill of materials required for the course directly from our technology partner STMicroelectronics: https://www.st.com/content/st_com/en/campaigns/educationalplatforms/embedded-arm-edx-edu.html
+                    Connected home appliances, biomedical devices, autonomous vehicles and IoT applications all rely on real-time operating systems (RTOS) to manage multiple digital and analog inputs, and efficient communication protocols to handle the transfer of data between peripherals and a microcontroller. By enrolling in Embedded Systems Essentials with Arm: Get Practical with Hardware , you will discover why these are powerful tools for any aspiring Embedded Systems designer.
+                    You’ll begin by obtaining an understanding of the basic principles of serial data communication and learn how to implement synchronous and asynchronous serial links on the ST Nucleo F401RE board. You’ll then be introduced to the powerful multitasking capabilities of RTOS. Using this new-found knowledge, you'll discover how to manage microcontroller peripherals in a concurrent manner, utilizing threads and other RTOS capabilities.
+                    Along the way, you'll get access to practical lab exercises using the ST Nucleo F401RE board , so you can obtain real-world experience in implementing these key concepts on an Arm-based microcontroller.
+                    This is the 2nd course in our Embedded Systems Essentials Program. The 1st course – Embedded Systems Essentials: Getting Started – focuses on using a simulated microcontroller using the Mbed API. In this second course, you’ll get hands-on experience working with a development board building embedded systems applications, and it can be taken independently of the first.
+                    As we continue to create increasingly complex IoT applications, driven by the advances of Artificial Intelligence and 5G, the next generation of developers will need to have a practical understanding of these processes on Arm-based microcontrollers. Upon completion of this course, you will have taken your next step into the exciting future of computing.
+    url: https://www.edx.org/learn/embedded-systems/arm-education-embedded-systems-essentials-with-arm-get-practical-with-hardware
+    subjects: ["Embedded systems hardware & firmware", "IoT development & Mbed API"]
+    platform: ["Embedded Systems"]
+    sw-hw: ["Hardware"]
+    level: ["Intermediate"]
+    publisher: ["Arm Education"]
+
+  - title: Build Your First Internet of Things (IoT) Application on Arm
+    description: |
+      Arm technology powered the smartphone revolution, and now it’s helping power the Internet of Things (IoT). This online course will provide beginners with an accelerated path to gain the knowledge necessary to thrive in a world transformed by innovations in IoT.
+                    You can purchase the bill of materials required for the course directly from our technology partner, STMicroelectronics: https://www.st.com/content/st_com/en/campaigns/educationalplatforms/iot-arm-edx-edu.html
+                    Instructor Update: We've identified an issue with the Google IoT Cloud service used in Modules 5 and 6 of the course. We are working to implement a solution to fix this issue and will update learners on our progress.
+                    You’ll start your learning journey in this course by understanding the fundamentals of IoT, but quickly move to practical projects that will teach you the essentials of building Arm-based IoT applications.
+                    Given that mobile computing platforms are where IoT often happens, we’ll also give you a basic understanding of Android application design, so you can integrate your mobile device into your IoT applications.
+                    IoT applications have the potential to change the lives of billions around the world. This is why we’ll also provide you with the social context behind the technology. The course includes videos that illustrate the global impact of IoT applications – especially in emerging economies such as Africa. From ‘smart farming’, to solar panels and ‘blood drones’ - each case study contextualises IoT in real ‘first mile’ and ‘last mile’ applications, to help you understand the transformative impact of this technology in the real world.
+                    Over the 6 modules, you will gain a key overview of: 1.Internet of Things (IoT) fundamentals 2.IoT and embedded system architectures 3.Embedded application programming
+                    4.Connectivity and networking technologies such as Bluetooth Low Energy (BLE), LoRaWAN, ZigBee, and the IEEE 802.1 protocols
+                    Cloud computing While not a requirement for this course, we recommend that learners who would like to improve their embedded systems skills (one of the essential technologies behind IoT implementations), also take our Embedded Systems Essentials on Arm edX program.
+                    The Internet of Things is one of the fundamental building blocks of the next wave of computing. Forge your own career path in this connected world by enrolling in our course today!
+    url: https://www.edx.org/learn/app-development/arm-education-build-your-first-internet-of-things-iot-application-on-arm
+    subjects: ["IoT development & Mbed API"]
+    platform: ["IoT"]
+    sw-hw: ["Hardware"]
+    level: ["Intermediate"]
+    publisher: ["Arm Education"]
+
+  - title: Introduction to Microprocessors
+    description: |
+      Introduction to Microprocessors is targeted at anyone with an interest in learning the basics of computer architecture, microprocessors and CPUs.
+                    Do you want to understand how the central processing unit (CPU) of a microprocessor works? How the code you type is actually executed by your computer? Presented by engineers from Arm, this course provides you with an introduction to the central components of processors including:
+                    the Arithmetic Logic Unit, or ALU, and the arithmetic and logical operations it carries out;
+                    the Fetch-Decode-Execute cycle or FDE within different architectures;
+                    pipelining, or how a CPU decides what to prioritize and the challenges faced when doing so;
+                    types of memory and their uses;
+                    the process that high level code, such as C#, goes through to get converted into machine code;
+                    assembly code, an interim step between high level and machine level code; and
+                    how assembling and compiling work together to produce object code or executable files.
+                    To get the most out of this course, learners should already be familiar with basic Boolean algebra and have experience of programming in object code, such as Python or C.
+    url:
+      - https://www.edx.org/learn/computer-architecture/arm-education-introduction-to-microprocessors
+      - https://www.coursera.org/learn/arm-education-introduction-to-microprocessors
+    subjects: ["ARM architecture & microprocessors"]
+    platform: ["microcontroller"]
+    sw-hw: ["Hardware"]
+    level: ["Beginner"]
+    publisher: ["Arm Education"]
+
+  - title: Computer Architecture Essentials on Arm
+    description: |
+      Whether you’re downloading an app, streaming a video, or clicking a mouse, modern microprocessors are the engines powering your digital life. Arm’s 30-year-plus history of designing energy and power-efficient microprocessors helped fuel the smartphone revolution, and today from the tiniest sensors to the world's most powerful supercomputers, Arm is building the future of computing.
+                    This course will provide you with a deep understanding of the architecture of modern microprocessors. We'll start your learning journey by covering the basics of computer architecture, such as definitions and a description of key components of a microprocessor.
+                    We'll then take a deep dive into important computer architectural concepts and processes. For example, you'll learn how pipelining, branch handling and cache memories can improve the performance of a single-cycle microprocessor. We'll then introduce you to the world of superscalar processors, and how to maximise performance using out-of-order instructions.
+                    Our lab exercises will bring to life the theory discussed in the course through a range of simulation tools.
+                    Along the way, we'll provide you with insights from key engineers at Arm, illustrating how and why certain design choices were made so you’ll have the real-world context behind these pivotal architectural decisions.
+                    With over 250 billion Arm-based chips deployed by our vast ecosystem of partners, Arm technology is present wherever computing happens. Be a part of this thriving community and enrol in Computer Architecture Essentials on Arm today.
+    url: https://www.edx.org/learn/computer-architecture/arm-education-computer-architecture-essentials-on-arm
+    subjects: ["ARM architecture & microprocessors"]
+    platform: ["Computer Architecture"]
+    sw-hw: ["Software"]
+    level: ["Intermediate"]
+    publisher: ["Arm Education"]
+
+  - title: Introduction to AI
+    description: |
+      Are you curious about how artificial intelligence (AI) really works? Wondering which models power these systems, and how they impact society and the environment? Presented by engineers from Arm, this course offers a comprehensive introduction to AI, machine learning, and data science—shedding light on their historical evolution, current capabilities, and potential future developments.
+                    By exploring both the technical concepts and the broader ethical, social, and environmental dilemmas, you will gain a well-rounded understanding of AI’s potential and challenges. You’ll discover how AI, machine learning, and data science interrelate; understand the fundamental algorithms, models, and frameworks; and learn how to apply these concepts in real-world scenarios. The course also addresses the pressing issue of energy consumption in AI.
+                    Key Topics Covered
+                    The turbulent history of AI and its evolution into today’s powerful technology
+                    How AI, machine learning, and data science fit together , including their definitions, examples, and interrelationship
+                    Current and potential future applications of AI in various industries
+                    Fundamental machine learning concepts , including classifiers, linear regression, and neural networks
+                    Training, validation, and test data : how to prepare and evaluate machine learning models
+                    Optimizers and loss functions : building blocks for fine-tuning your models
+                    Ethical and social considerations : exploring AI’s benefits, challenges, and the importance of responsible development
+                    Power consumption vs. sustainability : balancing performance and efficiency with environmental impact
+                    Practical frameworks , such as PyTorch, for implementing and training ML models
+                    AI in the cloud and on the edge : deploying AI across diverse platforms and computing environments
+                    The course culminates with a hands-on capstone project using the PyTorch framework and the CIFAR-10 dataset, allowing you to apply newly acquired skills to a real-world image classification challenge. Whether you’re a budding data scientist, a developer looking to integrate AI into your projects, or simply an AI enthusiast, this course offers both the foundational knowledge and practical skills needed to excel in the rapidly evolving world of artificial intelligence.
+    url:
+      - https://www.edx.org/learn/computer-science/arm-education-introduction-to-ai
+      - https://www.coursera.org/learn/intro-to-ai-arm
+    subjects: ["Security, privacy & ethics"]
+    platform: ["AI"]
+    sw-hw: ["Software"]
+    level: ["Beginner"]
+    publisher: ["Arm Education"]
+
+  - title: Machine Learning at the Edge on Arm- A Practical Introduction
+    description: |
+      The age of machine learning has arrived! Arm technology is powering a new generation of connected devices with sophisticated sensors that can collect a vast range of environmental, spatial and audio/visual data. Typically this data is processed in the cloud using advanced machine learning tools that are enabling new applications reshaping the way we work, travel, live and play.
+                    To improve efficiency and performance, developers are now looking to analyse this data directly on the source device – usually a microcontroller (we call this ‘the Edge’). But with this approach comes the challenge of implementing machine learning on devices that have constrained computing resources.
+                    This is where our course can help!
+                    By enrolling in Machine Learning at th e Edge on Arm: A Practical Introduction you’ll learn how to train machine learning models and implement them on industry relevant Arm-based microcontrollers.
+                    We’ll start your learning journey by taking you through the basics of artificial intelligence , machine learning and machine learning at the edge , and illustrate why businesses now need this technology to be available on connected devices. We’ll then introduce you to the concept of datasets and how to train algorithms using tools like Anaconda and Python. We'll then go on to explore advanced topics in machine learning such as artificial neural networks and computer vision.
+                    Along the way, our practical lab exercises will show you how you can address real-world design problems in deploying machine learning applications, such as speech and pattern recognition, as well as image processing, using actual sensor data obtained from the microcontroller. We'll also introduce you to the open source TensorFlow Python library, which is useful in the training and inference of deep neural networks.
+                    In the final module you’ll be able to apply what you’ve learned by implementing machine learning algorithms on a dataset of your choice.
+                    The ST DISCO-L475E board used in this course can be purchased directly from our technology partner STMicroelectronics: https://www.st.com/content/st_com/en/campaigns/educationalplatforms/iot-arm-edx-edu.html
+                    Through our vast ecosystem, Arm already powers a wide range of devices and applications that rely on machine learning at the edge. Be a part of this vibrant community of developers and start your machine learning journey by enrolling in our course today!
+    url:
+      - https://www.edx.org/learn/machine-learning/arm-education-machine-learning-at-the-edge-on-arm-a-practical-introduction
+      - https://www.coursera.org/learn/getting-started-with-machine-learning-at-the-edge-on-arm
+    subjects:
+      - "AI fundamentals & types"
+      - "Machine learning models & inference"
+      - "Edge deployment techniques"
+      - "Model compression/pruning/quantisation"
+      - "On-chip ML / microcontrollers"
+    platform: ["Machine Learning", "AI"]
+    sw-hw: ["Hardware"]
+    level: ["Intermediate"]
+    publisher: ["Arm Education"]
+
+  - title: Optimizing Generative AI on Arm Processors - From Edge to Cloud
+    description: |
+      This course is designed to help you optimize generative AI workloads on Arm architectures. Through practical labs and structured lectures, you will learn how to deploy AI models efficiently across different Arm-based environments, using Arm-specific techniques such as SIMD (SVE, Neon), low-bit quantization, and the optimized KleidiAI library.
+                    This course consists of four modules and hands-on lab exercises:
+                    Module 1:Challenges Facing Cloud and Edge GenAI Inference
+                    Understanding the limitations and constraints of AI inference in different environments.
+                    Module 2:Generative AI Models
+                    Exploring model architectures, training methodologies, and deployment considerations.
+                    Module 3:ML Frameworks and Optimized Libraries
+                    A deep dive into AI software stacks, including PyTorch, llama.cpp, and Arm-specific optimizations.
+                    Module 4: Optimization for CPU Inference
+                    Techniques such as quantization, pruning, and leveraging SIMD instructions for faster AI performance.
+    url: https://www.edx.org/learn/computer-science/arm-education-ai-on-arm
+    subjects:
+      - "AI fundamentals & types"
+      - "Machine learning models & inference"
+      - "Edge deployment techniques"
+      - "Model compression/pruning/quantisation"
+      - "Embedded systems hardware & firmware"
+      - "ARM architecture & microprocessors"
+    platform: ["AI"]
+    sw-hw: ["Software"]
+    level: ["Intermediate"]
+    publisher: ["Arm Education"]
+
+  - title: Teaching AI on the Edge
+    description: |
+      Mobile and edge devices are already able to deploy large language models (LLMs) in artificial intelligence (AI) applications that will have a transformational impact on society. How can academia prepare the next generation of engineers to leverage the opportunities and address the challenges presented by AI on the Edge? In this course, Dr. Catherine Breslin, an AI consultant from Cambridge UK and co-founder of Kingfisher Labs, discusses key considerations when teaching AI in higher education. 
+                    Teaching AI on the Edge is designed to equip educators and learners with the knowledge and skills to successfully implement artificial intelligence in resource-constrained environments. This course blends essential theoretical foundations with practical project-based experiences, preparing you to understand, build, and effectively teach AI systems optimized for edge devices.
+                    You'll explore the evolution from specialized task-specific AI models to versatile multimodal foundation models, learning critical techniques such as pruning, quantization, and small-model design that allow advanced AI capabilities to operate efficiently on limited hardware. The course emphasizes iterative development practices, rigorous model evaluation, and responsible AI deployment, highlighting data privacy, model bias, and regulatory considerations.
+                    Throughout this course, you'll gain insights into practical teaching strategies that balance theory and hands-on activities, encouraging creative, inclusive, and collaborative approaches to AI education. You'll also discover how to leverage open-source tools and frameworks to accelerate learning and inspire students to tackle real-world problems through innovative edge AI solutions.
+                    Join us to deepen your understanding of AI's potential, master effective teaching practices, and inspire the next generation of AI innovators to positively impact society.
+    url: https://www.coursera.org/learn/teaching-ai-on-the-edge
+    subjects:
+      - "AI fundamentals & types"
+      - "Machine learning models & inference"
+      - "Edge deployment techniques"
+      - "Model compression/pruning/quantisation"
+      - "Security, privacy & ethics"
+    platform: ["AI"]
+    sw-hw: ["Software"]
+    level: ["Beginner"]
+    publisher: ["Arm Education"]
+
+  - title: Business Models for Technology Innovators
+    description: |
+       Are you an engineer, technology innovator or just curious about the rapidly evolving landscape of what’s possible in the 4th Industrial Revolution? Learn through a series of case studies how to understand and deploy business models to capture value and maximise the opportunities of your technology passion.
+                    Sparking the world’s potential and transforming lives globally requires having not just a great technical idea, but one that fits into an effective business model that captures value at scale.
+                    Arm’s semiconductor technology is everywhere computing happens, yet we don’t manufacture anything. Instead, we license our IP to a rich eco-system of more 1000 partners, who transform their ideas into applications that positively impact the lives of billions in a globally connected world.
+                    In this case-study centred course produced in collaboration with Duke Corporate Education, you will explore a range of business models and how your contribution could and should fit in, whether that be in a large organisation or a start-up.
+                    These cases studies will form the context behind the critical skills you’ll need to understand the interconnected relationship between technology, product innovation, and business models.
+                    This is especially useful for those learners working their way through more technically-orientated content, but also of wider interest to the technically curious.
+                    Over the 6 modules of the course, you will gain a key overview of:
+                    The four key product development lessons for aspiring innovators and engineers
+                    The relationship between business and technology and how this has changed over time
+                    The major components of business models and how they are deployed in the technology sector
+                    The role of digital transformation processes and the impact of technology market trends in relation to business models
+                    The importance of partnership networks/ ecosystems
+                    How to assess, select and pivot to different business models
+                    The convergence of technologies such as Artificial Intelligence (AI), Robotics and the Internet of Things (IoT) is driving the creation of new industries, products and services that are reshaping modern life. As a forward-looking technology innovator, you’ll need to be able to understand, evaluate and deploy appropriate business models that will take maximum advantage of these new opportunities.
+                    Stay aware of the bigger picture and develop your business skills by enrolling in our course today!
+    url: https://www.edx.org/learn/business-model/arm-education-business-models-for-technology-innovators
+    subjects:
+      - "Business model & innovation skills"
+      - "Soft skills - creativity, problem-solving"
+    platform: ["Soft Skills"]
+    sw-hw: []
+    level: ["Beginner"]
+    publisher: ["Arm Education"]
+
+  - title: Fundamentos de sistemas embebidos con Arm - Primeros pasos
+    description: |
+      Los sistemas embebidos están en todas partes, y las tecnologías basadas en Arm son el estándar del sector. Empezar no podría ser más fácil. Este curso incluye instrucciones sobre cómo acceder a un simulador Mbed (consulta la sección de requisitos previos para obtener más detalles) para que puedas aplicar tus nuevos conocimientos y habilidades para crear prototipos y aplicaciones embebidas del mundo real de forma rápida, sin los problemas o gastos de compra de hardware.
+                    Desde los dispositivos móviles, portátiles e inteligentes de hoy en día hasta la transformadora Inteligencia Artificial (IA) y el Internet de las Cosas (IoT) o 5G del futuro próximo, los sistemas embebidos son los pilares fundamentales de nuestro mundo conectado. A medida que pasamos de miles de millones a billones de dispositivos inteligentes y conectados, es fundamental que la próxima generación de ingenieros conozca a fondo cómo construir e implantar rápidamente una solución moderna de sistemas embebidos.
+                    En este curso, aprenderás los fundamentos de un sistema embebido y descubrirás porqué la arquitectura y los procesadores Arm son especialmente adecuados para las aplicaciones IoT.
+                    Nuestros laboratorios interactivos han sido diseñados para cubrir los fundamentos técnicos, desarrollando habilidades esenciales que son demandadas en el mercado laboral para cualquier aspirante a ingeniero de sistemas embebidos.
+                    Comenzarás aprendiendo las características de un sistema embebido, sus componentes, beneficios y limitaciones, identificarás las disyuntivas entre coste y rendimiento, y explorarás por qué la arquitectura Arm y los procesadores son particularmente adecuados para el IoT.
+                    Tras ello, aplicarás tus nuevos conocimientos sobre E/S digitales y analógicas, interrupciones, funciones de bajo consumo, temporizadores y modulación por ancho de pulsos para programar un generador de ondas de audio y un reproductor de audio, y controlar periféricos en el proceso.
+                    Todo esto está soportado por la API Mbed - por lo que no se requiere hardware adicional, puedes descargar y utilizar el simulador directamente en tu propio ordenador.
+                    A lo largo de los seis módulos, obtendrás una visión general clave de:
+                    Los sistemas embebidos y su importancia en las aplicaciones informáticas modernas.
+                    La arquitectura de microcontroladores basada en Arm estándar de la industria, sus características y modelos de programación.
+                    Las posibilidades de desarrollo y conexión de IoT en el futuro son enormes. Para alcanzar esta visión de futuro, se necesitarán muchos ingenieros y desarrolladores que imaginen y diseñen estos dispositivos conectados y las tecnologías sobre las que se construyen.
+                    El mundo de los sistemas embebidos es tu puerta de entrada al IoT y a todas las oportunidades que ofrece.
+    url: https://www.edx.org/learn/embedded-systems/arm-education-fundamentos-de-sistemas-embebidos-con-arm-primeros-pasos
+    subjects: ["Embedded systems hardware & firmware"]
+    platform: ["Embedded Systems"]
+    sw-hw: ["Hardware"]
+    level: ["Intermediate"]
+    publisher: ["Arm Education"]
+
+  - title: AI at the Edge on ARM - Understanding and Deploying LLMs for Mobile Devices
+    description: |
+      The rapid rise of AI applications is making a transformational impact on society, reshaping our business and personal lives. In addition, the ubiquitous availability of mobile devices now able to deploy Large Language Models (LLMs) to solve real-world problems represents the next exciting evolutionary stage in the development of AI applications.
+                      This course will answer three fundamental questions related to the rise of mobile AI:
+                      1. What are the technological trends driving AI to the edge?
+                      2. What are the tools and techniques required to deploy LMs on Arm-powered mobile devices?
+                      3. Why is Arm the best-placed platform to harness the advantages of LMs on the edge?
+                      We’ll start your learning journey by taking you through the basics of AI at the edge and deploying LMs on Arm-based mobile devices. We’ll then introduce you to the tools needed to make this happen, with a focus on how to optimise LMs on mobile devices using model compression techniques such as pruning and quantisation.
+                      Along the way, our practical lab exercises will show you how to implement LMs on a mobile device, and all you’ll need is an Arm-powered phone to get started.
+                      We’ll also feature key engineers from Arm discussing current and future developments in AI at the edge, providing you with industry relevant insights into the evolution of this exciting new technology.
+                      The course will target early and mid-career professionals looking to upskill or supplement their CVs, or undergraduates with programming experience.
+                      AI at the edge is powered by Arm. Discover the tools and techniques you’ll need to deploy LMs on ubiquitous Arm-based mobile phones by enrolling in this course today!
+    url: https://www.edx.org/learn/computer-science/arm-education-ai-at-the-edge-on-arm
+    subjects:
+      - "AI fundamentals & types"
+      - "Machine learning models & inference"
+      - "Edge deployment techniques"
+      - "Model compression/pruning/quantisation"
+      - "Security, privacy & ethics"
+    platform: ["AI"]
+    sw-hw: ["Software"]
+    level: ["Advanced"]
+    publisher:
+      - "Arm Education"
+      - "Cambridge University"
+
+  - title: Introduction to System on Chip Design
+    description: |
+      System-on-Chip (SoC) technology is the backbone of modern smart systems - from smartphones and tablets to autonomous vehicles and embedded IoT devices. But what exactly goes into designing an SoC?
+                    Introduction to System-on-Chip (SoC) offers a basic overview of how entire systems are integrated onto a single silicon chip. Starting with basic concepts and progressing through architecture, design flows, and real-world implementation, this course gives you the knowledge to understand how SoCs are structured, designed, and fabricated.
+                    You’ll examine the key functional blocks of an SoC, including processors, memory subsystems, interconnects, and peripherals. You’ll learn about front-end and back-end design methodologies, hardware-software co-design, and the role of EDA tools in managing complexity.
+                    The course is ideal for beginners who want to enter the semiconductor industry or deepen their knowledge of integrated systems design.
+    url: https://www.edx.org/learn/engineering/kings-college-london-introduction-to-soc-design
+    subjects: ["SoC"]
+    platform: ["SoC Design"]
+    sw-hw: ["Hardware"]
+    level: ["Beginner"]
+    publisher: ["Kings College London"]
+
+  - title: Introduction to Very Large-Scale Integration Design
+    description: |
+      Integrated circuits (ICs) are at the heart of every electronic device we use today, from smartphones to spacecraft. But how are these tiny, powerful systems created?
+                    Introduction to VLSI provides a comprehensive beginner-friendly look into the world of Very Large-Scale Integration (VLSI). You’ll follow the entire chip design journey, starting with silicon purification and wafer creation, through to digital logic, chip packaging, and modern industry tools.
+                    Explore the historical evolution of computing hardware, from vacuum tubes to transistors and Moore’s Law. Learn how modern chips are developed using Electronic Design Automation (EDA) tools, and discover how technologies like ASICs, FPGAs, CMOS, and MOSFETs power our digital lives.
+                    Through engaging videos and clearly explained technical concepts, you’ll gain confidence with essential terminology such as ASICs, FPGAs, HDL, RTL, CMOS, MOSFETs, and GDSII files, and understand their real-world applications.
+                    The course breaks down complex topics into intuitive, engaging explanations with real-world context. Whether you’re a student, engineer, or tech enthusiast, this course opens the gateway to chip design and the future of electronics.
+    url: https://www.edx.org/learn/engineering/kings-college-london-introduction-to-vlsi-design
+    subjects: ["Integrated circuits"]
+    platform: ["Integrated circuits"]
+    sw-hw: ["Hardware"]
+    level: ["Beginner"]
+    publisher: ["Kings College London"]

@@ -9,26 +9,33 @@ publication-date: 2025-07-21
   These freely accessible courses help students, hobbyists, and engineers learn key hardware and software design principles using Arm-based platforms. Many are available on <strong>edX</strong> or <strong>Coursera</strong>.
 </p>
 
-<!-- Search Box -->
-<input type="text" id="course-search" placeholder="Search courses..." style="width:100%; padding: 0.6rem; font-size: 1rem; margin: 1rem 0; border: 2px solid #7336f7; border-radius: 6px;" />
 
 <!-- Grid Container -->
+{% assign items = site.data.courseInformation.courses %}
+
 <div class="course-grid" id="course-grid">
+  {% for course in items %}
+    <div class="course-card" 
+    data-keywords="{{ course.subjects | join: ' ' }} {{ course.platform | join: ' ' }} {{ course['sw-hw'] | join: ' ' }} {{ course.level | join: ' ' }} {{ course.publisher | join: ' ' }}"
+          data-title="{{ course.title | downcase | escape }}"
+         data-description="{{ course.description | strip_html | downcase | escape }}">
+    
+      <h3>{{ course.title }}</h3>
 
-  <div class="course-card" data-keywords="embedded systems getting started edx hardware beginner">
-    <h3>Embedded Systems Essentials with Arm: Getting Started</h3>
-    <a class="button" href="https://www.edx.org">Access via edX</a>
-  </div>
-
-  <div class="course-card" data-keywords="embedded systems practical edx hardware lab">
-    <h3>Embedded Systems Essentials with Arm: Get Practical with Hardware</h3>
-    <a class="button" href="https://www.edx.org">Access via edX</a>
-  </div>
-
-  <div class="course-card" data-keywords="iot internet of things application edx">
-    <h3>Build Your First Internet of Things (IoT) Application on Arm</h3>
-    <a class="button" href="https://www.edx.org">Access via edX</a>
-  </div>
-
-  <!-- Add more course-card blocks with appropriate data-keywords -->
+      {% if course.url %}
+        {% if course.url contains "http" and course.url contains "[" %}
+        {% elsif course.url.size > 0 and course.url[0] contains "http" %}
+          {% for link in course.url %}
+            <a class="button" href="{{ link }}" target="_blank">
+              Access via {{ link | split: '.' | slice: 1, 1 | first | capitalize }}
+            </a>
+          {% endfor %}
+        {% else %}
+          <a class="button" href="{{ course.url }}" target="_blank">
+            Access via {{ course.url | split: '.' | slice: 1, 1 | first | capitalize }}
+          </a>
+        {% endif %}
+      {% endif %}
+    </div>
+  {% endfor %}
 </div>
