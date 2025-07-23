@@ -39,3 +39,7 @@ publication-date: 2025-07-21
     </div>
   {% endfor %}
 </div>
+
+<div id="no-results" style="display: none; text-align: center; margin-top: 2rem; color: #666;">
+  <p><strong>No results found.</strong><br>Try adjusting your filters or search terms.</p>
+</div>
