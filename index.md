@@ -20,7 +20,7 @@ publication-date: 2025-07-21
           data-title="{{ course.title | downcase | escape }}"
          data-description="{{ course.description | strip_html | downcase | escape }}">
     
-      <h3>{{ course.title }}</h3>
+      <h3 class="course-title">{{ course.title }}</h3>
 
       {% if course.url %}
         {% if course.url contains "http" and course.url contains "[" %}

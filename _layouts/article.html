@@ -24,7 +24,7 @@ type: article
        {% assign dataset = "courseInformation" %}
        {% assign collection = "courses" %}
        <!--<p>akash : {{ site.data["courseInformation"]["courses"] | size }} items loaded</p>-->
-        {% assign filtersToShow = "subjects,platform,sw-hw,level,publisher" | split: "," %}
+        {% assign filtersToShow = "subjects,level,publisher" | split: "," %}
 
         {% for coll in collections %} <!-- need to make it customizable -->
           <!--<p>coll is {{ coll}} </p>
