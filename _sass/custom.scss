@@ -100,3 +100,17 @@ a:hover {
   width: 200px;   /* or 150px, 10rem, etc. */
   height: auto;   /* maintain aspect ratio */
 }
+
+.course-section {
+  margin-top: 3rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.25rem;
+}
+
