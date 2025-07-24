@@ -81,3 +81,9 @@ a:hover {
     flex: 1 1 100%;
   }
 }
+
+
+.logo-wrapper svg {
+  width: 200px;   /* or 150px, 10rem, etc. */
+  height: auto;   /* maintain aspect ratio */
+}
