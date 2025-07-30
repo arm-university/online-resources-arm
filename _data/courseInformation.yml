@@ -22,6 +22,7 @@ courses:
     sw-hw: ["Software"]
     level: ["Beginner"]
     publisher: ["Arm Education"]
+    Format: ["Course"]
 
   - title: Embedded Systems Essentials with Arm - Get Practical with Hardware
     description: |
@@ -38,6 +39,7 @@ courses:
     sw-hw: ["Hardware"]
     level: ["Intermediate"]
     publisher: ["Arm Education"]
+    Format: ["Course"]
 
   - title: Build Your First Internet of Things (IoT) Application on Arm
     description: |
@@ -57,6 +59,7 @@ courses:
     sw-hw: ["Hardware"]
     level: ["Intermediate"]
     publisher: ["Arm Education"]
+    Format: ["Course"]
 
   - title: Introduction to Microprocessors
     description: |
@@ -78,6 +81,7 @@ courses:
     sw-hw: ["Hardware"]
     level: ["Beginner"]
     publisher: ["Arm Education"]
+    Format: ["Course"]
 
   - title: Computer Architecture Essentials on Arm
     description: |
@@ -93,6 +97,7 @@ courses:
     sw-hw: ["Software"]
     level: ["Intermediate"]
     publisher: ["Arm Education"]
+    Format: ["Course"]
 
   - title: Introduction to AI
     description: |
@@ -118,6 +123,7 @@ courses:
     sw-hw: ["Software"]
     level: ["Beginner"]
     publisher: ["Arm Education"]
+    Format: ["Course"]
 
   - title: Machine Learning at the Edge on Arm- A Practical Introduction
     description: |
@@ -143,6 +149,7 @@ courses:
     sw-hw: ["Hardware"]
     level: ["Intermediate"]
     publisher: ["Arm Education"]
+    Format: ["Course"]
 
   - title: Optimizing Generative AI on Arm Processors - From Edge to Cloud
     description: |
@@ -168,6 +175,7 @@ courses:
     sw-hw: ["Software"]
     level: ["Intermediate"]
     publisher: ["Arm Education"]
+    Format: ["Course"]
 
   - title: Teaching AI on the Edge
     description: |
@@ -187,6 +195,7 @@ courses:
     sw-hw: ["Software"]
     level: ["Beginner"]
     publisher: ["Arm Education"]
+    Format: ["Course"]
 
   - title: Business Models for Technology Innovators
     description: |
@@ -213,6 +222,7 @@ courses:
     sw-hw: []
     level: ["Beginner"]
     publisher: ["Arm Education"]
+    Format: ["Course"]
 
   - title: Fundamentos de sistemas embebidos con Arm - Primeros pasos
     description: |
@@ -234,6 +244,7 @@ courses:
     sw-hw: ["Hardware"]
     level: ["Intermediate"]
     publisher: ["Arm Education"]
+    Format: ["Course"]
 
   - title: AI at the Edge on ARM - Understanding and Deploying LLMs for Mobile Devices
     description: |
@@ -260,6 +271,7 @@ courses:
     publisher:
       - "Arm Education"
       - "Cambridge University"
+    Format: ["Course"]
 
   - title: Introduction to System on Chip Design
     description: |
@@ -273,6 +285,7 @@ courses:
     sw-hw: ["Hardware"]
     level: ["Beginner"]
     publisher: ["Kings College London"]
+    Format: ["Course"]
 
   - title: Introduction to Very Large-Scale Integration Design
     description: |
@@ -287,3 +300,4 @@ courses:
     sw-hw: ["Hardware"]
     level: ["Beginner"]
     publisher: ["Kings College London"]
+    Format: ["Course"]

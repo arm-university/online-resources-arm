@@ -1,3 +1,10 @@
-collections:
+collections :
   - dataset: courseInformation
     key: courses
+  - dataset: educationKitInformation
+    key: kits
+  - dataset: otherResorcesInformation
+    key: resources
+  - dataset: booksInformation
+    key: books
+  
