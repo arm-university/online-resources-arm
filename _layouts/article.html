@@ -11,30 +11,26 @@ type: article
 <div class="layout--article">
   {% include article/top/custom.html -%}
 
-   <div class="subjects">
-      <div class="search-wrapper">
-        <i class="fas fa-search search-icon"></i>
-        <input type="text" id="course-search" placeholder="Search..." />
-        <i class="fas fa-times clear-icon" id="clear-search"></i>
-      </div>
-      <!-- Filter Logic Starts here-->
-       {% assign collections = site.data.collections %}
-       <!--<p>{{collections}}</p>
-       <p> size is {{collections |size }}</p>-->
-       {% assign dataset = "courseInformation" %}
-       {% assign collection = "courses" %}
-       <!--<p>akash : {{ site.data["courseInformation"]["courses"] | size }} items loaded</p>-->
-        {% assign filtersToShow = "subjects,level,publisher" | split: "," %}
+  <div class="subjects">
+    <div class="search-wrapper">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" id="course-search" placeholder="Search..." />
+      <i class="fas fa-times clear-icon" id="clear-search"></i>
+    </div>
 
-        {% for coll in collections %} <!-- need to make it customizable -->
-          <!--<p>coll is {{ coll}} </p>
-          <p>Dataset: {{ coll.dataset }}</p>
-          <p>Key: {{ coll.key }}</p>
-          <p>Item count: {{ site.data["courseInformation"]["courses"] | size }}</p>-->
-          {% assign items = site.data["courseInformation"]["courses"] %}
- 
-          <h2>{{ coll.key | capitalize }}</h2>
-          <div class="filter-wrapper">
+    <!-- Filter Logic Starts Here -->
+    {% assign filtersToShow = "subjects,level,Format" | split: "," %} <!-- edit this line to show or hide filter in the filter section-->
+    {% assign courses = site.data.courseInformation.courses %}
+    {% assign books = site.data.booksInformation.books %}
+    {% assign kits = site.data.educationKitInformation.kits %}
+    {% assign resources = site.data.otherResorcesInformation.resources %} <!-- append these section to add more data fron collectiions-->
+   
+      {% assign items = courses | concat: books | concat: kits | concat: resources %}
+   <!-- collection.yml giving data in map format not as array hence uisng items array and adding the meta data here.-->
+
+      {% if items %}
+        <h2>{{ key | capitalize }}</h2>
+        <div class="filter-wrapper" data-dataset="{{ key }}">
           {% for filterType in filtersToShow %}
             <div class="filter">
               <strong>{{ filterType | capitalize }}:</strong>
@@ -58,6 +54,7 @@ type: article
                     type="checkbox"
                     class="filter-checkbox"
                     data-category="{{ filterType }}"
+                    data-dataset="{{ key }}"
                     value="{{ option }}"
                   >
                   {{ option }}
@@ -65,12 +62,12 @@ type: article
               {% endfor %}
             </div>
           {% endfor %}
-          </div>
-        {% endfor %}
-      <!--Filter Logic Ends here-->
+        </div>
+      {% endif %}
 
-
+    <!-- Filter Logic Ends Here -->
   </div>
+</div>
 
 
   <div class="article__content" itemprop="articleBody">{{ content }}</div> 

@@ -67,7 +67,3 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
-
-//for section just like arm developer page > 
-//platform,subject,sw/hw,publisher.
-

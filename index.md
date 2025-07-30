@@ -5,92 +5,130 @@ layout: article
 publication-date: 2025-07-21
 ---
 
-<p>
-  These freely accessible courses help students, hobbyists, and engineers learn key hardware and software design principles using Arm-based platforms. Many are available on <strong>edX</strong> or <strong>Coursera</strong>.
-</p>
 
 
 <!-- Grid Container -->
-{% assign items = site.data.courseInformation.courses %}
-{% assign grouped = items | group_by_exp: "course", "course.publisher | join: ', '" %}
+{% assign all_collections = site.data %} <!-- here we are fetching the data as a map ->
 
-<!-- Render Arm Education courses first (ungrouped) -->
+{% assign datasets = 
+  "courseInformation:courses,
+   educationKitInformation:kits,
+   otherResorcesInformation:resources,
+   booksInformation:books" | split: "," %} 
+
+{% for dataset in datasets %} <!-- dataset and key from collection ->
+  {% assign pair = dataset | split: ":" %}
+  {% assign dataset_name = pair[0] | strip %}
+  {% assign dataset_key = pair[1] | strip %} 
+  {% assign items = all_collections[dataset_name][dataset_key] %}
 <div class="course-grid" id="course-grid">
-  {% for group in grouped %}
-    {% assign publisher_name = group.name | strip %}
+  {% if items %}
+    {% assign grouped = items | group_by_exp: "item", "item.Format | join: ', '" %}
+    
+    <div class="collapsible-section">
+      <!-- Section toggle button -->
+      <button class="collapsible-toggle" onclick="toggleSection('{{ dataset_key }}')">
+        <span>{{ dataset_key | capitalize }}</span>
+        <span class="chevron">&#9660;</span>
+      </button>
 
-    {% if publisher_name contains "Arm Education" %}
-      {% for course in group.items %}
-        <div class="course-card"
-          data-keywords="{{ course.subjects | join: ' ' }} {{ course.platform | join: ' ' }} {{ course['sw-hw'] | join: ' ' }} {{ course.level | join: ' ' }} {{ course.publisher | join: ' ' }}"
-          data-title="{{ course.title | downcase | escape }}"
-          data-description="{{ course.description | strip_html | downcase | escape }}">
+      <!-- Collapsible content -->
+      <div class="collapsible-content" id="section-{{ dataset_key }}">
+        {% for group in grouped %}
+          <div class="course-section">
+            <!--<h3 class="group-title">Format: {{ group.name }}</h3>-->
+            {% if group.name == "Course" %}
+              <p>
+                These freely accessible courses help students, hobbyists, and engineers learn key hardware and software design principles using Arm-based platforms. Many are available on <strong>edX</strong> or <strong>Coursera</strong>.
+              </p>
+            {% endif %}
+            {% if group.name == "Books" %}
+              <p>
+                Arm Education books program aims to take learners from foundational knowledge and skills covered by its textbooks to expert-level overviews of Arm-based technologies through its reference books. Textbooks are suitable for classroom adoption in Electrical Engineering, Computer Engineering and related areas. Reference books are suitable for graduate students, researchers, aspiring and practising engineers. .
+              </p>
+            {% endif %}
+            {% if group.name == "Education Kit" %}
+              <p>
+                To help faculty teach the latest technology from Arm and its ecosystem, the Arm University Program has developed a suite of Education Kits in a range of core subjects relevant to Electrical, Electronic and Computer Engineering, Computer Science and beyond.  An Education Kit comprises a full set of teaching materials including lecture slides and lab manuals with solutions. .
+              </p>
+            {% endif %}
+            {% if group.name == "other" %}
+              <p>
+                Access tools, webinars and other resources to enhance your teaching, learning and research outcomes.  
+              </p>
+            {% endif %}
+            <div class="course-grid" id="{{ dataset_key }}-grid">
+              {% for course in group.items %}
+                <div class="course-card"
+                  data-keywords="{{ course.subjects | join: ' ' }} {{ course.platform | join: ' ' }} {{ course['sw-hw'] | join: ' ' }} {{ course.level | join: ' ' }} {{ course.publisher | join: ' ' }}  {{ course.Format | join: ' ' }}"
+                  data-title="{{ course.title | downcase | escape }}"
+                  data-description="{{ course.description | strip_html | downcase | escape }}">
 
-          <h3 class="course-title">{{ course.title }}</h3>
-
-          {% if course.url %}
-            {% if course.url contains "http" and course.url contains "[" %}
-            {% elsif course.url.size > 0 and course.url[0] contains "http" %}
-              {% for link in course.url %}
-                <a class="button" href="{{ link }}" target="_blank">
-                  Access via {{ link | split: '.' | slice: 1, 1 | first | capitalize }}
-                </a>
+                  <h3 class="course-title">{{ course.title }}</h3>
+                 {% if course.url %}
+                    {% if course.url contains "[" and course.url contains "http" %}
+                      {# Skip if it's malformed #}
+                    {% elsif course.url.size > 0 and course.url[0] contains "http" %}
+                      {% for link in course.url %}
+                        {% assign domain = link | split: "/" | slice: 2, 1 | first %}
+                        {% assign parts = domain | split: "." | reverse %}
+                        {% assign site_name = parts[1] | capitalize %}
+                        <a class="button" href="{{ link }}" target="_blank">
+                          Access via {{ site_name }}
+                        </a>
+                      {% endfor %}
+                    {% else %}
+                      {% assign domain = course.url | split: "/" | slice: 2, 1 | first %}
+                      {% assign parts = domain | split: "." | reverse %}
+                      {% assign site_name = parts[1] | capitalize %}
+                      <a class="button" href="{{ course.url }}" target="_blank">
+                        Access via {{ site_name }}
+                      </a>
+                    {% endif %}
+                {% endif %}
+                </div>
               {% endfor %}
-            {% else %}
-              <a class="button" href="{{ course.url }}" target="_blank">
-                Access via {{ course.url | split: '.' | slice: 1, 1 | first | capitalize }}
-              </a>
-            {% endif %}
-          {% endif %}
-
-        </div>
-      {% endfor %}
-    {% endif %}
-  {% endfor %}
-</div>
-
-<div class="course-grid" id="course-grid">
-<!-- Render all other publishers with section titles -->
-{% for group in grouped %}
-  {% assign publisher_name = group.name | strip %}
-
-  {% unless publisher_name contains "Arm Education" %}
-    <div class="course-section">
-      <h2 class="section-title">Courses from {{ publisher_name }}</h2>
-      <div class="course-grid">
-        {% for course in group.items %}
-          <div class="course-card"
-            data-keywords="{{ course.subjects | join: ' ' }} {{ course.platform | join: ' ' }} {{ course['sw-hw'] | join: ' ' }} {{ course.level | join: ' ' }} {{ course.publisher | join: ' ' }}"
-            data-title="{{ course.title | downcase | escape }}"
-            data-description="{{ course.description | strip_html | downcase | escape }}">
-
-            <h3 class="course-title">{{ course.title }}</h3>
-
-            {% if course.url %}
-              {% if course.url contains "http" and course.url contains "[" %}
-              {% elsif course.url.size > 0 and course.url[0] contains "http" %}
-                {% for link in course.url %}
-                  <a class="button" href="{{ link }}" target="_blank">
-                    Access via {{ link | split: '.' | slice: 1, 1 | first | capitalize }}
-                  </a>
-                {% endfor %}
-              {% else %}
-                <a class="button" href="{{ course.url }}" target="_blank">
-                  Access via {{ course.url | split: '.' | slice: 1, 1 | first | capitalize }}
-                </a>
-              {% endif %}
-            {% endif %}
-
+            </div>
           </div>
         {% endfor %}
       </div>
     </div>
-  {% endunless %}
+  {% endif %}
+  </div>
 {% endfor %}
-</div>
 
 
 <!-- No Results Message -->
 <div id="no-results" style="display: none; text-align: center; margin-top: 2rem; color: #666;">
   <p><strong>No results found.</strong><br>Try adjusting your filters or search terms.</p>
 </div>
+
+<link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
+
+<!-- this Js handels the toggle section -->
+
+<script>
+  function toggleSection(key) {
+    const section = document.getElementById('section-' + key);
+    const container = section.parentElement;
+    const isActive = container.classList.contains('active');
+
+    if (isActive) {
+
+      section.style.height = section.scrollHeight + 'px';
+      requestAnimationFrame(() => {
+        section.style.height = '0px';
+        container.classList.remove('active');
+      });
+    } else {
+
+      section.style.height = section.scrollHeight + 'px';
+      container.classList.add('active');
+
+      section.addEventListener('transitionend', function resetHeight() {
+        section.style.height = 'auto';
+        section.removeEventListener('transitionend', resetHeight);
+      });
+    }
+  }
+</script>

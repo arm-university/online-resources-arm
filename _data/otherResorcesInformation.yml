@@ -1,0 +1,46 @@
+header:
+  title: other Resorces Information Page.
+
+resources:
+  - title: SocLabs   
+    description: |
+        SoC Labs is the global academic community for System On Chip development using the Arm based ecosystem. There are various ways SoC Labs can help you, the technology section lists the extensive Arm IP that Arm Academic Access provides free for academic purposes; the design flow section explains the steps needed to develop a SoC design with tools and other support from our Semiconductor Education Alliance partners and other industry organisations.
+        The core of SoC Labs is community lead academic SoC design projects. You can find many examples in the projects section and below you will see the core reusable reference designs the community maintain to simplify and lower the cost of academic SoC design.
+        Feel free to use the resources, use the navigation icons within the pages and navigation scheme at the top of the page. We are an academic community providing mutual support to each other, we are happy to hear from you, and look forward to collaborating with you. Just join up and start commenting.
+    url: https://soclabs.org
+    subjects: ["SoC Design",""]
+    platform: 
+    sw-hw: 
+    level: ["Beginner"]
+    Format: ["other"]
+
+  - title: EduLabs  
+    description: |
+        EduLabs is supported by the Semiconductor Education Alliance, a partnership of leading technology companies and universities committed to equipping our future workforce.
+    url: https://www.edulabs.bot
+    subjects: ["AI fundamentals & types","Digital Signal Processing","Operating Systems and RTOS","SoC Design","VLSI Design","Robotics and Applications","Machine learning models & inference","Edge deployment techniques","Model compression/pruning/quantisation","On-chip ML / microcontrollers","Embedded systems hardware & firmware","Arm architecture & microprocessors","IoT development","Security, privacy & ethics","Business model & innovation skills","Soft skills: creativity, problem-solving"]
+    platform: 
+    sw-hw: 
+    level: ["Beginner"]
+    Format: ["other"]
+
+  - title: DeveloperLabs
+    description: |
+      
+    url: https://arm-university.github.io/Arm-Developer-Labs/
+    subjects: ["AI fundamentals & types","Digital Signal Processing","Operating Systems and RTOS","SoC Design","VLSI Design","Robotics and Applications","Machine learning models & inference","Edge deployment techniques","Model compression/pruning/quantisation","On-chip ML / microcontrollers","Embedded systems hardware & firmware","Arm architecture & microprocessors","IoT development","Security, privacy & ethics","Business model & innovation skills","Soft skills: creativity, problem-solving"]
+    platform: 
+    sw-hw: 
+    level: ["Beginner"]
+    Format: ["other"]
+
+  - title: Asim
+    description: |
+      ASim is browser-based tool for assembling and simulating Arm A64 assembly language programs. ASim implements a useful subset of the A64 opcodes and supports character I/O via a virtual console.
+    url:
+      - https://compedulabs.org/cgi/asim
+    subjects: ["AI fundamentals & types","Digital Signal Processing","Operating Systems and RTOS","SoC Design","VLSI Design","Robotics and Applications","Machine learning models & inference","Edge deployment techniques","Model compression/pruning/quantisation","On-chip ML / microcontrollers","Embedded systems hardware & firmware","Arm architecture & microprocessors","IoT development","Security, privacy & ethics","Business model & innovation skills","Soft skills: creativity, problem-solving"]
+    platform: 
+    sw-hw: 
+    level: ["Beginner"]
+    Format: ["other"]
