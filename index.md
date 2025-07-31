@@ -8,7 +8,7 @@ publication-date: 2025-07-21
 
 
 <!-- Grid Container -->
-{% assign all_collections = site.data %} <!-- here we are fetching the data as a map ->
+{% assign all_collections = site.data %} 
 
 {% assign datasets = 
   "courseInformation:courses,
@@ -16,7 +16,7 @@ publication-date: 2025-07-21
    otherResorcesInformation:resources,
    booksInformation:books" | split: "," %} 
 
-{% for dataset in datasets %} <!-- dataset and key from collection ->
+{% for dataset in datasets %} 
   {% assign pair = dataset | split: ":" %}
   {% assign dataset_name = pair[0] | strip %}
   {% assign dataset_key = pair[1] | strip %} 
@@ -91,6 +91,7 @@ publication-date: 2025-07-21
             </div>
           </div>
         {% endfor %}
+        <div class="collapsible-spacer"></div>
       </div>
     </div>
   {% endif %}
@@ -114,14 +115,14 @@ publication-date: 2025-07-21
     const isActive = container.classList.contains('active');
 
     if (isActive) {
-
+      // Collapse section
       section.style.height = section.scrollHeight + 'px';
       requestAnimationFrame(() => {
         section.style.height = '0px';
         container.classList.remove('active');
       });
     } else {
-
+      // Expand section
       section.style.height = section.scrollHeight + 'px';
       container.classList.add('active');
 
@@ -131,4 +132,20 @@ publication-date: 2025-07-21
       });
     }
   }
+
+  function resetSectionHeight(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+
+    // If it’s expanded, recalculate height based on updated content
+    const container = section.parentElement;
+    if (container.classList.contains('active')) {
+      section.style.height = 'auto'; // reset temporarily to get true scrollHeight
+      const newHeight = section.scrollHeight;
+      section.style.height = newHeight + 'px';
+    }
+  }
+
 </script>
+
+

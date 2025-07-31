@@ -114,3 +114,44 @@ a:hover {
   padding-bottom: 0.25rem;
 }
 
+.course-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  min-height: 100px; /* Ensures the container holds space */
+  transition: min-height 0.3s ease;
+}
+
+
+.course-grid:empty::before {
+  content: "No matching items.";
+  color: #888;
+  font-style: italic;
+  display: block;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+
+.collapsible-content {
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.collapsible-section {
+  margin-bottom: 2rem; /* Reduce if needed */
+}
+
+.course-section {
+  margin-bottom: 1.5rem; /* Reduce if there's too much vertical spacing */
+}
+
+.collapsible-spacer {
+  height: 0;
+  transition: height 0.3s ease;
+}
+
+.collapsible-content:has(.course-grid:only-child) .collapsible-spacer {
+  height: 50px; /* or 2rem — adjust to your liking */
+}
