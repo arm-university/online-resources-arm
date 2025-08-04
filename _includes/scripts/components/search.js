@@ -1,10 +1,11 @@
 
 (function () {
   var SOURCES = window.TEXT_VARIABLES.sources;
-
-  window.Lazyload.js(SOURCES.jquery, function () {
+  window.Lazyload.js(SOURCES.jquery, function() {
+    // search panel
     var search = (window.search || (window.search = {}));
-    var useDefaultSearchBox = window.useDefaultSearchBox === undefined ? true : window.useDefaultSearchBox;
+    var useDefaultSearchBox = window.useDefaultSearchBox === undefined ?
+      true : window.useDefaultSearchBox ;
 
     var $searchModal = $('.js-page-search-modal');
     var $searchToggle = $('.js-search-toggle');
@@ -29,7 +30,7 @@
       } else {
         search.onShow && search.onHide();
         useDefaultSearchBox && $searchInput[0] && $searchInput[0].blur();
-        setTimeout(function () {
+        setTimeout(function() {
           useDefaultSearchBox && ($searchInput.val(''), $searchBox.removeClass('not-empty'));
           search.clear && search.clear();
           window.pageAsideAffix && window.pageAsideAffix.refresh();
@@ -37,12 +38,11 @@
       }
     }
 
-    $searchToggle.on('click', function () {
+    $searchToggle.on('click', function() {
       modalVisible ? searchModal.hide() : searchModal.show();
     });
-
     // Char Code: 83  S, 191 /
-    $(window).on('keyup', function (e) {
+    $(window).on('keyup', function(e) {
       if (!modalVisible && !window.isFormElement(e.target || e.srcElement) && (e.which === 83 || e.which === 191)) {
         modalVisible || searchModal.show();
       }
@@ -52,24 +52,23 @@
       $searchBox = $('.js-search-box');
       $searchInput = $searchBox.children('input');
       $searchClear = $searchBox.children('.js-icon-clear');
-
-      search.getSearchInput = function () {
+      search.getSearchInput = function() {
         return $searchInput.get(0);
       };
-      search.getVal = function () {
+      search.getVal = function() {
         return $searchInput.val();
       };
-      search.setVal = function (val) {
+      search.setVal = function(val) {
         $searchInput.val(val);
       };
 
-      $searchInput.on('focus', function () {
+      $searchInput.on('focus', function() {
         $(this).addClass('focus');
       });
-      $searchInput.on('blur', function () {
+      $searchInput.on('blur', function() {
         $(this).removeClass('focus');
       });
-      $searchInput.on('input', window.throttle(function () {
+      $searchInput.on('input', window.throttle(function() {
         var val = $(this).val();
         if (val === '' || typeof val !== 'string') {
           search.clear && search.clear();
@@ -78,37 +77,10 @@
           search.onInputNotEmpty && search.onInputNotEmpty(val);
         }
       }, 400));
-      $searchClear.on('click', function () {
-        $searchInput.val('');
-        $searchBox.removeClass('not-empty');
+      $searchClear.on('click', function() {
+        $searchInput.val(''); $searchBox.removeClass('not-empty');
         search.clear && search.clear();
       });
     }
-
-    // --- NEW CODE BELOW FOR FILTERS AND RESIZING RESOURCES SECTION ---
-
-    // Utility: reset height of expanded sections
-    function resetSectionHeight(sectionId) {
-      const section = document.getElementById(sectionId);
-      if (!section) return;
-      const container = section.parentElement;
-      if (container.classList.contains('active')) {
-        section.style.height = 'auto';
-        const newHeight = section.scrollHeight;
-        section.style.height = newHeight + 'px';
-      }
-    }
-
-    // Hook into all filter checkbox changes
-    const checkboxes = document.querySelectorAll('.filter-checkbox');
-    checkboxes.forEach((checkbox) => {
-      checkbox.addEventListener('change', function () {
-        // Defer to allow filter results to reflow
-        setTimeout(() => {
-          resetSectionHeight('section-resources');
-        }, 100);
-      });
-    });
-
   });
 })();

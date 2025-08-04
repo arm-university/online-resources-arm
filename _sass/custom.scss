@@ -114,15 +114,6 @@ a:hover {
   padding-bottom: 0.25rem;
 }
 
-.course-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  min-height: 100px; /* Ensures the container holds space */
-  transition: min-height 0.3s ease;
-}
-
 
 .course-grid:empty::before {
   content: "No matching items.";
@@ -139,9 +130,10 @@ a:hover {
   transition: height 0.3s ease;
 }
 
-.collapsible-section {
-  margin-bottom: 2rem; /* Reduce if needed */
-}
+
+/* === tiny patch === */
+.collapsible-section { flex: 1 1 100%; }   /* each item takes the full row */
+.collapsible-toggle  { width: 100%; }      /* the button stretches to 100% */
 
 .course-section {
   margin-bottom: 1.5rem; /* Reduce if there's too much vertical spacing */
@@ -154,4 +146,25 @@ a:hover {
 
 .collapsible-content:has(.course-grid:only-child) .collapsible-spacer {
   height: 50px; /* or 2rem — adjust to your liking */
+}
+
+.section-description {
+  font-size: 1rem;
+  color: #444;
+  max-width: 960px;
+  margin: 1.5rem auto 2rem;
+  line-height: 1.6;
+  text-align: left;
+  padding: 0 1rem;
+}
+
+
+.no-results-message {
+  display: none;
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+  margin: 2rem auto 1rem;
+  padding: 1rem;
+  max-width: 700px;
 }

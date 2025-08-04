@@ -89,7 +89,11 @@ publication-date: 2025-07-21
                 </div>
               {% endfor %}
             </div>
+            <div class="no-results-message"
+              style="display:none;text-align:center;margin-top:1rem;color:#666;">
+            <p><strong>No {{ dataset_key | capitalize }} matched your filters.</strong></p>
           </div>
+        </div><!-- close .course-section -->
         {% endfor %}
         <div class="collapsible-spacer"></div>
       </div>
@@ -147,5 +151,4 @@ publication-date: 2025-07-21
   }
 
 </script>
-
 

@@ -40,30 +40,79 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function filterAndSearchCourses() {
-    const query = searchInput.value.toLowerCase().trim();
+    const query = searchInput?.value.toLowerCase().trim() || "";
     const selectedFilters = getSelectedFilters();
-    let visibleCount = 0;
+    let totalVisible = 0;
 
+    // Filter cards
     for (let i = 0; i < cards.length; i++) {
       const card = cards[i];
       const passesSearch = matchesSearch(card, query);
       const passesFilter = matchesFilters(card, selectedFilters);
+      const show = passesSearch && passesFilter;
 
-       const show = passesSearch && passesFilter;
-       card.style.display = show ? "block" : "none";
-       if (show) visibleCount++;
+      card.style.display = show ? "block" : "none";
+      if (show) totalVisible++;
     }
-    const noResultsMsg = document.getElementById("no-results");
-    noResultsMsg.style.display = visibleCount === 0 ? "block" : "none";
+
+    // Section-level "no materials" messages
+    document.querySelectorAll(".course-section").forEach(section => {
+      const grid = section.querySelector(".course-grid");
+      const message = section.querySelector(".no-results-message");
+      const isOpen = section.closest(".collapsible-content")?.parentElement?.classList.contains("active");
+
+      const visibleCards = Array.from(grid.querySelectorAll(".course-card"))
+        .filter(card => card.offsetParent !== null);
+
+      if (message) {
+        message.style.display = isOpen && visibleCards.length === 0 ? "block" : "none";
+      }
+    });
+
+    // Global fallback
+    const noResultsGlobal = document.getElementById("no-results");
+    if (noResultsGlobal) {
+      noResultsGlobal.style.display = totalVisible === 0 ? "block" : "none";
+    }
+
+    // Fix collapsible section heights after filtering
+    document.querySelectorAll(".collapsible-content").forEach(section => {
+      const container = section.parentElement;
+      if (container.classList.contains("active")) {
+        section.style.height = "auto";
+        const height = section.scrollHeight;
+        section.style.height = height + "px";
+      }
+    });
   }
 
-  searchInput.addEventListener("input", filterAndSearchCourses);
-  clearBtn.addEventListener("click", function () {
-    searchInput.value = "";
-    filterAndSearchCourses();
-  });
+  function resetSectionHeight(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+    const container = section.parentElement;
+    if (container.classList.contains("active")) {
+      section.style.height = "auto";
+      const newHeight = section.scrollHeight;
+      section.style.height = newHeight + 'px';
+    }
+  }
+
+  // Event listeners
+  if (searchInput) {
+    searchInput.addEventListener("input", filterAndSearchCourses);
+  }
+
+  if (clearBtn) {
+    clearBtn.addEventListener("click", function () {
+      searchInput.value = "";
+      filterAndSearchCourses();
+    });
+  }
+
   for (let i = 0; i < checkboxes.length; i++) {
     checkboxes[i].addEventListener("change", filterAndSearchCourses);
   }
 
+  // Run once at page load (in case filters are pre-set)
+  filterAndSearchCourses();
 });
