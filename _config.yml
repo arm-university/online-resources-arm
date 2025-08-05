@@ -23,7 +23,6 @@ baseurl : # does not include hostname
 title   :
 description: > # this means to ignore newlines until "Language & timezonekill -9 12345
 
-  A collection of free online courses published by Arm Education
 
 
 ## => Language and Timezone

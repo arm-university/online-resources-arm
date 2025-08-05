@@ -128,11 +128,14 @@ publication-date: 2025-07-21
     } else {
       // Expand section
       section.style.height = section.scrollHeight + 'px';
-      container.classList.add('active');
+      container.classList.add('active');  
+      
+      filterAndSearchCourses();
 
       section.addEventListener('transitionend', function resetHeight() {
         section.style.height = 'auto';
         section.removeEventListener('transitionend', resetHeight);
+        filterAndSearchCourses();
       });
     }
   }

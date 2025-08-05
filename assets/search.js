@@ -65,7 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
         .filter(card => card.offsetParent !== null);
 
       if (message) {
-        message.style.display = isOpen && visibleCards.length === 0 ? "block" : "none";
+        const empty = isOpen && visibleCards.length === 0;   // ← keep previous test
+        message.style.display = empty ? "block" : "none";    // show / hide banner
+        grid.style.display    = empty ? "none"  : "flex";    // hide / show cards grid
       }
     });
 
