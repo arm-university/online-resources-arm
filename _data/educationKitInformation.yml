@@ -38,7 +38,7 @@ kits:
       It covers key DSP concepts such as discrete-time linear time-invariant (LTI) systems, convolution, correlation, FIR and IIR filter design, and the application of impulse invariant and bilinear transform methods. Learners explore the use of Fourier analysis techniques including DFT and FFT, and study the z-transform and Nyquist theorem for signal representation. The kit also includes practical implementation of adaptive filtering using LMS algorithms in applications like prediction, system identification, noise cancellation, and equalization. With integrated support for hardware setup, real-time signal sampling and reconstruction using audio codecs and DACs, and filter design using the window method, this kit equips learners to build real-world DSP systems on Arm-based platforms.
     url:
       - https://www.arm.com/resources/education/education-kits/digital-signal-processing
-    subjects: ["ARM architecture & microprocessors"]
+    subjects: ["Arm architecture & microprocessors"]
     platform: 
     sw-hw: ["Hardware"]
     level: ["Beginner"]

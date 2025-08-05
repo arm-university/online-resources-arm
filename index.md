@@ -1,5 +1,5 @@
 ---
-title: 'Online Courses from Arm Education'
+title: 'Online Resources from Arm Education'
 filter: course
 layout: article
 publication-date: 2025-07-21

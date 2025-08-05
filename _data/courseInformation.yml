@@ -76,7 +76,7 @@ courses:
     url:
       - https://www.edx.org/learn/computer-architecture/arm-education-introduction-to-microprocessors
       - https://www.coursera.org/learn/arm-education-introduction-to-microprocessors
-    subjects: ["ARM architecture & microprocessors"]
+    subjects: ["Arm architecture & microprocessors"]
     platform: ["microcontroller"]
     sw-hw: ["Hardware"]
     level: ["Beginner"]
@@ -92,7 +92,7 @@ courses:
                     Along the way, we'll provide you with insights from key engineers at Arm, illustrating how and why certain design choices were made so you’ll have the real-world context behind these pivotal architectural decisions.
                     With over 250 billion Arm-based chips deployed by our vast ecosystem of partners, Arm technology is present wherever computing happens. Be a part of this thriving community and enrol in Computer Architecture Essentials on Arm today.
     url: https://www.edx.org/learn/computer-architecture/arm-education-computer-architecture-essentials-on-arm
-    subjects: ["ARM architecture & microprocessors"]
+    subjects: ["Arm architecture & microprocessors"]
     platform: ["Computer Architecture"]
     sw-hw: ["Software"]
     level: ["Intermediate"]
@@ -170,7 +170,7 @@ courses:
       - "Edge deployment techniques"
       - "Model compression/pruning/quantisation"
       - "Embedded systems hardware & firmware"
-      - "ARM architecture & microprocessors"
+      - "Arm architecture & microprocessors"
     platform: ["AI"]
     sw-hw: ["Software"]
     level: ["Intermediate"]
