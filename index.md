@@ -5,7 +5,12 @@ layout: article
 publication-date: 2025-07-21
 ---
 
-
+<meta name="description" content="Explore curated courses, kits, and books from Arm Education.">
+<meta property="og:title" content="Online Resources from Arm Education">
+<meta property="og:description" content="Explore curated courses, kits, and books from Arm Education.">
+<meta property="og:image" content="https://arm-university.github.io/online-resources-arm/assets/logo.png">
+<meta property="og:url" content="https://arm-university.github.io/online-resources-arm/">
+<meta property="og:type" content="website">
 
 <!-- Grid Container -->
 {% assign all_collections = site.data %} 
