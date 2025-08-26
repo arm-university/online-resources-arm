@@ -166,6 +166,7 @@ courses:
     url: 
       - https://www.edx.org/learn/computer-science/arm-education-ai-on-arm
       - https://www.coursera.org/learn/optimizing-generative-ai
+      
     subjects:
       - "AI fundamentals & types"
       - "Machine learning models & inference"
