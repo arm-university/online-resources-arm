@@ -163,7 +163,9 @@ courses:
                     A deep dive into AI software stacks, including PyTorch, llama.cpp, and Arm-specific optimizations.
                     Module 4: Optimization for CPU Inference
                     Techniques such as quantization, pruning, and leveraging SIMD instructions for faster AI performance.
-    url: https://www.edx.org/learn/computer-science/arm-education-ai-on-arm
+    url: 
+      - https://www.edx.org/learn/computer-science/arm-education-ai-on-arm
+      - https://www.coursera.org/learn/optimizing-generative-ai
     subjects:
       - "AI fundamentals & types"
       - "Machine learning models & inference"
