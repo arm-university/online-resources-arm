@@ -100,27 +100,36 @@ document.addEventListener("DOMContentLoaded", function () {
     return query ? (title.includes(query) || description.includes(query)) : true;
   }
 
+  // ⭐ this is opning section if a perticular format is selected.
+  function openCollapsibleForSection(sectionEl) {
+    const content = sectionEl.closest(".collapsible-content");
+    if (!content) return;
+    const container = content.parentElement; 
+    if (!container.classList.contains("active")) {
+      container.classList.add("active");
+      // set height to allow smooth expand
+      content.style.height = "auto";
+      const h = content.scrollHeight;
+      content.style.height = h + "px";
+    }
+  }
+
   function filterAndSearchCourses() {
     const query = (searchInput?.value.toLowerCase().trim()) || "";
     const selectedFilters = getSelectedFilters();
 
     let totalVisible = 0;
-
-
     const sectionVisibleCounts = new Map();
     const sectionNodes = new Set();
 
-   
     for (let i = 0; i < cards.length; i++) {
       const card = cards[i];
       const passesSearch = matchesSearch(card, query);
       const passesFilter = matchesFilters(card, selectedFilters);
       const show = passesSearch && passesFilter;
 
-      // show/hide the card
       card.style.display = show ? "block" : "none";
 
-   
       const section = card.closest(".course-section");
       if (section) {
         sectionNodes.add(section);
@@ -133,6 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (show) totalVisible++;
     }
 
+    // 2) update sections (banners/grids)
     sectionNodes.forEach(section => {
       const grid = section.querySelector(".course-grid");
       const message = section.querySelector(".no-results-message");
@@ -147,11 +157,26 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
+   // this is for section open 
+    const formatActive =
+      (selectedFilters["format"] && selectedFilters["format"].length > 0) ||
+      (selectedFilters["Format"] && selectedFilters["Format"].length > 0); 
+
+    if (formatActive) {
+      sectionNodes.forEach(section => {
+        const visibleCount = sectionVisibleCounts.get(section) || 0;
+        if (visibleCount > 0) {
+          openCollapsibleForSection(section);
+        }
+      });
+    }
+
 
     const noResultsGlobal = document.getElementById("no-results");
     if (noResultsGlobal) {
       noResultsGlobal.style.display = totalVisible === 0 ? "block" : "none";
     }
+
 
     document.querySelectorAll(".collapsible-content").forEach(section => {
       const container = section.parentElement;
@@ -183,7 +208,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     writeStateToURL(state, { replace: !push });
-
     requestAnimationFrame(filterAndSearchCourses);
   }
 
@@ -193,7 +217,6 @@ document.addEventListener("DOMContentLoaded", function () {
     setControlsFromState(state, { checkboxes, searchInput });
     filterAndSearchCourses();
   })();
-
 
   if (searchInput) {
     let debounceTimer;
@@ -210,14 +233,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-
   for (let i = 0; i < checkboxes.length; i++) {
     checkboxes[i].addEventListener("change", () => {
       applyUIAndSyncURL({ push: true });
     });
   }
 
-  // Back/forward navigation
   window.addEventListener("popstate", () => {
     const state = readStateFromURL();
     setControlsFromState(state, { checkboxes, searchInput });
