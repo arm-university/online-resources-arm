@@ -12,7 +12,7 @@ resources:
     platform: 
     sw-hw: 
     level: ["Beginner"]
-    Format: ["other"]
+    Format: ["Resources"]
 
   - title: EduLabs  
     description: |
@@ -22,7 +22,7 @@ resources:
     platform: 
     sw-hw: 
     level: ["Beginner"]
-    Format: ["other"]
+    Format: ["Resources"]
 
   - title: DeveloperLabs
     description: |
@@ -32,7 +32,7 @@ resources:
     platform: 
     sw-hw: 
     level: ["Beginner"]
-    Format: ["other"]
+    Format: ["Resources"]
 
   - title: Asim
     description: |
@@ -43,4 +43,4 @@ resources:
     platform: 
     sw-hw: 
     level: ["Beginner"]
-    Format: ["other"]
+    Format: ["Resources"]
