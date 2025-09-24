@@ -30,41 +30,61 @@ type: article
    <!-- collection.yml giving data in map format not as array hence uisng items array and adding the meta data here.-->
 
       {% if items %}
-        <h2>{{ key | capitalize }}</h2>
-        <div class="filter-wrapper" data-dataset="{{ key }}">
-          {% for filterType in filtersToShow %}
-            <div class="filter">
-              <strong>{{ filterType | capitalize }}:</strong>
+  <h2>{{ key | capitalize }}</h2>
+  <div class="filter-wrapper" data-dataset="{{ key }}">
+    {% for filterType in filtersToShow %}
+      {%- assign options = "" | split: "" -%}
 
-              {% assign options = "" | split: "" %}
+      {%- for item in items -%}
+        {%- assign raw = item[filterType] -%}
 
-              {% for item in items %}
-                {% assign values = item[filterType] %}
-                {% if values %}
-                  {% for val in values %}
-                    {% unless options contains val %}
-                      {% assign options = options | push: val %}
-                    {% endunless %}
-                  {% endfor %}
-                {% endif %}
-              {% endfor %}
+        {%- comment -%}
+          Normalize to an array:
+          - If already an array, keep it.
+          - If a string, split by comma.
+          - Else, empty array.
+        {%- endcomment -%}
+        {%- if raw -%}
+          {%- if raw.first or raw.size -%}
+            {%- assign values = raw -%}
+          {%- elsif raw contains ',' or raw != '' -%}
+            {%- assign values = raw | split: ',' -%}
+          {%- else -%}
+            {%- assign values = "" | split: "" -%}
+          {%- endif -%}
 
-              {% for option in options %}
-                <label>
-                  <input
-                    type="checkbox"
-                    class="filter-checkbox"
-                    data-category="{{ filterType }}"
-                    data-dataset="{{ key }}"
-                    value="{{ option }}"
-                  >
-                  {{ option }}
-                </label>
-              {% endfor %}
-            </div>
-          {% endfor %}
+          {%- for v in values -%}
+            {%- assign val = v | strip -%}
+            {%- if val and val != '' -%}
+              {%- unless options contains val -%}
+                {%- assign options = options | push: val -%}
+              {%- endunless -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+      {%- endfor -%}
+
+      {%- if options.size > 0 -%}
+        <div class="filter">
+          <strong>{{ filterType | capitalize }}:</strong>
+          {%- assign options = options | sort -%}
+          {%- for option in options -%}
+            <label>
+              <input
+                type="checkbox"
+                class="filter-checkbox"
+                data-category="{{ filterType }}"
+                data-dataset="{{ key }}"
+                value="{{ option }}"
+              >
+              {{ option }}
+            </label>
+          {%- endfor -%}
         </div>
-      {% endif %}
+      {%- endif -%}
+    {% endfor %}
+  </div>
+{% endif %}
 
     <!-- Filter Logic Ends Here -->
   </div>

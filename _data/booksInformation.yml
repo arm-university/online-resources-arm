@@ -104,7 +104,7 @@ books:
     level: ["Beginner"]
     Format: ["Books"]
 
-  - title: The Microprocessor- A Practical Introduction using the Arm Cortex-M0 Processor (co-published by Wiley and Arm Education 
+  - title: The Microprocessor- A Practical Introduction using the Arm Cortex-M0 Processor (co-published by Wiley and Arm Education)
     description: |
        “The Microprocessor: A Practical Introduction using the Arm Cortex M0 Processor” by Darshak S.Vasavada and S. K. Sinha is a user‑friendly guide that introduces microprocessor architecture and programming concepts through the lens of the Arm Cortex‑M0 processor. Using simplified models and real code examples in assembly and C, the book explains the Cortex‑M0 instruction set, exception model, system architecture, and microcontroller programming in a highly accessible way  ￼ ￼. Designed for beginners, it blends foundational theory with practical exercises that can be executed using the free version of Keil µVision MDK—no hardware required  ￼ ￼. With its clear structure and hands‑on labs, this 528‑page volume lays a solid foundation for advanced study in microprocessor design and embedded systems
     url: https://www.wiley.com/en-gb/The+Microprocessor%3A+A+Practical+Introduction+using+the+Arm+Cortex-M0+Processor-p-9781394245307
