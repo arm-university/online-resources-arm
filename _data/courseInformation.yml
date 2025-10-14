@@ -23,6 +23,7 @@ courses:
     level: ["Beginner"]
     publisher: ["Arm Education"]
     Format: ["Course"]
+    Learning Pathways : ["Embedded, IoT and Edge Computing"]
 
   - title: Embedded Systems Essentials with Arm - Get Practical with Hardware
     description: |
@@ -40,7 +41,8 @@ courses:
     level: ["Intermediate"]
     publisher: ["Arm Education"]
     Format: ["Course"]
-
+    Learning Pathways : ["Embedded, IoT and Edge Computing"]
+    
   - title: Build Your First Internet of Things (IoT) Application on Arm
     description: |
       Arm technology powered the smartphone revolution, and now it’s helping power the Internet of Things (IoT). This online course will provide beginners with an accelerated path to gain the knowledge necessary to thrive in a world transformed by innovations in IoT.
@@ -60,6 +62,7 @@ courses:
     level: ["Intermediate"]
     publisher: ["Arm Education"]
     Format: ["Course"]
+    Learning Pathways : ["Embedded, IoT and Edge Computing"]
 
   - title: Introduction to Microprocessors
     description: |
@@ -82,6 +85,7 @@ courses:
     level: ["Beginner"]
     publisher: ["Arm Education"]
     Format: ["Course"]
+    Learning Pathways : ["Digital Design and SoC Integration"]
 
   - title: Computer Architecture Essentials on Arm
     description: |
@@ -98,6 +102,7 @@ courses:
     level: ["Intermediate"]
     publisher: ["Arm Education"]
     Format: ["Course"]
+    Learning Pathways : ["Digital Design and SoC Integration"]
 
   - title: Introduction to AI
     description: |
@@ -118,12 +123,16 @@ courses:
     url:
       - https://www.edx.org/learn/computer-science/arm-education-introduction-to-ai
       - https://www.coursera.org/learn/intro-to-ai-arm
-    subjects: ["Security, privacy & ethics"]
+    subjects:
+      - "AI fundamentals & types"
+      - "Machine learning models & inference"
+      - "Security, privacy & ethics"
     platform: ["AI"]
     sw-hw: ["Software"]
     level: ["Beginner"]
     publisher: ["Arm Education"]
     Format: ["Course"]
+    Learning Pathways : ["Machine Learning and AI"]
 
   - title: Machine Learning at the Edge on Arm- A Practical Introduction
     description: |
@@ -150,6 +159,7 @@ courses:
     level: ["Intermediate"]
     publisher: ["Arm Education"]
     Format: ["Course"]
+    Learning Pathways : ["Machine Learning and AI"]
 
   - title: Optimizing Generative AI on Arm Processors - From Edge to Cloud
     description: |
@@ -179,6 +189,7 @@ courses:
     level: ["Intermediate"]
     publisher: ["Arm Education"]
     Format: ["Course"]
+    Learning Pathways : ["Machine Learning and AI"]
 
   - title: Teaching AI on the Edge
     description: |
@@ -193,12 +204,12 @@ courses:
       - "Machine learning models & inference"
       - "Edge deployment techniques"
       - "Model compression/pruning/quantisation"
-      - "Security, privacy & ethics"
     platform: ["AI"]
     sw-hw: ["Software"]
     level: ["Beginner"]
     publisher: ["Arm Education"]
     Format: ["Course"]
+    Learning Pathways : ["Machine Learning and AI"]
 
   - title: Business Models for Technology Innovators
     description: |
@@ -248,6 +259,7 @@ courses:
     level: ["Intermediate"]
     publisher: ["Arm Education"]
     Format: ["Course"]
+    Learning Pathways : ["Embedded, IoT and Edge Computing"]
 
   - title: AI at the Edge on ARM - Understanding and Deploying LLMs for Mobile Devices
     description: |
@@ -275,6 +287,7 @@ courses:
       - "Arm Education"
       - "Cambridge University"
     Format: ["Course"]
+    Learning Pathways : ["Machine Learning and AI"]
 
   - title: Introduction to System on Chip Design
     description: |
@@ -283,12 +296,14 @@ courses:
                     You’ll examine the key functional blocks of an SoC, including processors, memory subsystems, interconnects, and peripherals. You’ll learn about front-end and back-end design methodologies, hardware-software co-design, and the role of EDA tools in managing complexity.
                     The course is ideal for beginners who want to enter the semiconductor industry or deepen their knowledge of integrated systems design.
     url: https://www.edx.org/learn/engineering/kings-college-london-introduction-to-soc-design
-    subjects: ["SoC"]
+    subjects: ["SoC Design","Arm architecture & microprocessors"]
     platform: ["SoC Design"]
     sw-hw: ["Hardware"]
     level: ["Beginner"]
     publisher: ["Kings College London"]
     Format: ["Course"]
+    Learning Pathways : ["Digital Design and SoC Integration"]
+    Subtitle : ["Produced by King's College London with support from Arm Education"]
 
   - title: Introduction to Very Large-Scale Integration Design
     description: |
@@ -298,9 +313,12 @@ courses:
                     Through engaging videos and clearly explained technical concepts, you’ll gain confidence with essential terminology such as ASICs, FPGAs, HDL, RTL, CMOS, MOSFETs, and GDSII files, and understand their real-world applications.
                     The course breaks down complex topics into intuitive, engaging explanations with real-world context. Whether you’re a student, engineer, or tech enthusiast, this course opens the gateway to chip design and the future of electronics.
     url: https://www.edx.org/learn/engineering/kings-college-london-introduction-to-vlsi-design
-    subjects: ["Integrated circuits"]
+    subjects: ["VLSI Design","Arm architecture & microprocessors"]
     platform: ["Integrated circuits"]
     sw-hw: ["Hardware"]
     level: ["Beginner"]
     publisher: ["Kings College London"]
     Format: ["Course"]
+    Learning Pathways : ["Digital Design and SoC Integration"]
+    Subtitle: ["Produced by King's College London with support from Arm Education"]
+

@@ -11,16 +11,18 @@ kits:
     sw-hw: ["Hardware"]
     level: ["Beginner"]
     Format: ["Education Kit"]
+    Learning Pathways : ["Embedded, IoT and Edge Computing"]
 
   - title: Rapid Embedded Systems Design and Programming 
     description: |
         This education kit provides an in-depth exploration of Arm processor architectures and Arm-based microcontrollers as powerful platforms for modern embedded computing. It emphasizes the use of high-level programming APIs, particularly the Mbed platform, to accelerate the rapid prototyping and development of embedded applications. Learners gain knowledge of embedded system characteristics, the flow of programming Arm processors, and the integration of microcontroller peripherals using digital and analog I/O, interrupts, pulse-width modulation (PWM), timers, and key serial communication protocols such as UART, SPI, and I2C. The kit also introduces the features of Real-Time Operating Systems (RTOS) and demonstrates how Mbed RTOS APIs support multitasking applications. Practical experience includes using the Mbed Command-line Interface (CLI) to import, compile, and run embedded projects, utilizing Mbed Studio to develop peripheral control functions, implementing serial communications, and designing applications like an advanced music player and dynamic LED displays. By combining theoretical knowledge with hands-on development, this kit equips learners with essential skills in embedded programming, real-time systems, and API-driven design using the Mbed ecosystem.
     url: https://github.com/arm-university/Rapid-Embedded-Education-Kit
-    subjects: ["Embedded systems hardware & firmware", "IoT development & Mbed API"]
+    subjects: ["Embedded systems hardware & firmware"]
     platform: 
     sw-hw: ["Hardware"]
     level: ["Beginner"]
     Format: ["Education Kit"]
+    Learning Pathways : ["Embedded, IoT and Edge Computing"]
 
   - title: Internet of Things
     description: |
@@ -31,6 +33,7 @@ kits:
     sw-hw: ["Hardware"]
     level: ["Beginner"]
     Format: ["Education Kit"]
+    Learning Pathways : ["Embedded, IoT and Edge Computing"]
 
   - title: Digital Signal Processing 
     description: |
@@ -38,11 +41,12 @@ kits:
       It covers key DSP concepts such as discrete-time linear time-invariant (LTI) systems, convolution, correlation, FIR and IIR filter design, and the application of impulse invariant and bilinear transform methods. Learners explore the use of Fourier analysis techniques including DFT and FFT, and study the z-transform and Nyquist theorem for signal representation. The kit also includes practical implementation of adaptive filtering using LMS algorithms in applications like prediction, system identification, noise cancellation, and equalization. With integrated support for hardware setup, real-time signal sampling and reconstruction using audio codecs and DACs, and filter design using the window method, this kit equips learners to build real-world DSP systems on Arm-based platforms.
     url:
       - https://github.com/arm-university/Digital-Signal-Processing-Education-Kit
-    subjects: ["Arm architecture & microprocessors"]
+    subjects: ["Digital Signal Processing"]
     platform: 
     sw-hw: ["Hardware"]
     level: ["Beginner"]
     Format: ["Education Kit"]
+    Learning Pathways : ["Embedded, IoT and Edge Computing"]
 
   - title: Real-Time Operating Systems Design and Programming 
     description: |
@@ -53,6 +57,7 @@ kits:
     sw-hw: ["Hardware"]
     level: ["Beginner"]
     Format: ["Education Kit"]
+    Learning Pathways : ["Embedded, IoT and Edge Computing"]
 
   - title: Embedded Linux
     description: |
@@ -64,6 +69,7 @@ kits:
     sw-hw: ["Hardware"]
     level: ["Beginner"]
     Format: ["Education Kit"]
+    Learning Pathways : ["Embedded, IoT and Edge Computing"]
 
   - title: Introduction to SoC Design
     description: |
@@ -75,6 +81,7 @@ kits:
     sw-hw: ["Hardware"]
     level: ["Beginner"]
     Format: ["Education Kit"]
+    Learning Pathways : ["Digital Design and SoC Integration"]
 
   - title: Advanced SoC Design 
     description: |
@@ -85,6 +92,7 @@ kits:
     sw-hw: ["Hardware"]
     level: ["Advanced"]
     Format: ["Education Kit"]
+    Learning Pathways : ["Digital Design and SoC Integration"]
 
   - title: Introduction to Robotic Systems 
     description: |
@@ -115,8 +123,9 @@ kits:
     sw-hw: ["Hardware"]
     level: ["Beginner"]
     Format: ["Education Kit"]
+    Learning Pathways : ["Digital Design and SoC Integration"]
 
-  - title: VLSI Fundamentals - A Practical Approach  
+  - title: VLSI Fundamentals - A Practical Approach - Generic Edition 
     description: |
       This education kit provides a comprehensive foundation in digital integrated circuit (IC) design, focusing on both theoretical principles and practical implementation from the transistor level to physical design. Learners will study the nonideal characteristics of transistors, including high field effects, channel length modulation, threshold voltage variation, and leakage, and understand their impact on CMOS circuit behavior. Key topics include estimating CMOS characteristics such as noise margins, DC response, and RC delay models, as well as resistance and capacitance in on-chip wires with optimization methods for delay, power consumption, and crosstalk. The kit covers the operation and layout planning of CMOS latches and flip-flops using stick diagrams, and explores timing constraints like setup and hold times, propagation delays, and contamination delays in sequential circuits. Important concepts in testing such as stuck-at faults, Automatic Test Pattern Generation (ATPG), Built-in Self Test (BIST), and various SRAM architectures are also addressed. Learners will analyze sources of power dissipation and clock network effects on skew and power, and understand on-chip variation. Circuit simulation using SPICE is included to analyze DC transfer characteristics, transient response, and power consumption. Intellectual outcomes involve understanding nMOS and pMOS characteristics, drawing CMOS inverter cross-sections, interpreting MOS I-V curves across operating regions, and analyzing the impact of technology scaling. Learners will apply logical effort for delay minimization and explore delay/power trade-offs in combinational logic circuits, including adder architectures like Carry-Ripple, Carry-Skip, Carry-Lookahead, Carry-Select, Carry-Increment, and Tree Adders. They will also design datapath components such as comparators, shifters, adders, multipliers, and ESD protection circuits. Practical tasks include designing, simulating, and verifying logic gates from transistor-level schematics to layout, using tools like NC-Verilog, Design Compiler, and SOC Encounter for synthesis, placement, and routing, and completing chip assembly and tape-out in GDSII format. This kit equips learners with the essential skills for modern CMOS VLSI design, simulation, verification, and physical implementation.
     url: https://github.com/arm-university/VLSI-Fundamentals-Education-Kit
@@ -125,6 +134,7 @@ kits:
     sw-hw: ["Hardware"]
     level: ["Beginner"]
     Format: ["Education Kit"]
+    Learning Pathways : ["Digital Design and SoC Integration"]
 
   - title: VLSI Fundamentals- A Practical Approach – Cadence Edition  
     description: |
@@ -136,3 +146,4 @@ kits:
     sw-hw: ["Hardware"]
     level: ["Beginner"]
     Format: ["Education Kit"]
+    Learning Pathways : ["Digital Design and SoC Integration"]

@@ -7,4 +7,7 @@ collections :
     key: resources
   - dataset: booksInformation
     key: books
-  
+  - dataset : blogs
+    key: blog
+  - dataset : workshop 
+    key: workshop

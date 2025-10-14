@@ -20,13 +20,15 @@ type: article
     </div>
 
     <!-- Filter Logic Starts Here -->
-    {% assign filtersToShow = "subjects,level,Format" | split: "," %} <!-- edit this line to show or hide filter in the filter section-->
+    {% assign filtersToShow = "subjects,level,Format,Learning Pathways" | split: "," %} <!-- edit this line to show or hide filter in the filter section-->
     {% assign courses = site.data.courseInformation.courses %}
     {% assign books = site.data.booksInformation.books %}
     {% assign kits = site.data.educationKitInformation.kits %}
-    {% assign resources = site.data.otherResorcesInformation.resources %} <!-- append these section to add more data fron collectiions-->
+    {% assign resources = site.data.otherResorcesInformation.resources %} 
+    {% assign blogs = site.data.blogs.blogs %}
+    {% assign workshop = site.data.workshop.workshop %}<!-- append these section to add more data fron collectiions-->
    
-      {% assign items = courses | concat: books | concat: kits | concat: resources %}
+      {% assign items = courses | concat: books | concat: kits | concat: resources | concat: blogs | concat: workshop %}
    <!-- collection.yml giving data in map format not as array hence uisng items array and adding the meta data here.-->
 
       {% if items %}

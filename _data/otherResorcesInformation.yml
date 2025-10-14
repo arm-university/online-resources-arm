@@ -44,3 +44,36 @@ resources:
     sw-hw: 
     level: ["Beginner"]
     Format: ["Resources"]
+
+  - title: Synopsys Digital Design Resource Center
+    description: |
+    url:
+      - https://www.synopsys.com/academic-research/university.html#Design
+    subjects: ["VLSI Design"]
+    platform: 
+    sw-hw: 
+    level: ["Beginner"]
+    Format: ["Resources"]
+    Learning Pathways : ["Digital Design and SoC Integration"]
+
+  - title: Arm Education in Conversation with Sophie Wilson
+    description: |
+    url:
+      - https://www.youtube.com/watch?v=IASlQ9kjRRA
+    subjects: ["VLSI Design","SoC Design","On-chip ML / microcontrollers","Arm architecture & microprocessors","Business model & innovation skills","Soft skills: creativity, problem-solving"]
+    platform: 
+    sw-hw: 
+    level: ["Beginner"]
+    Format: ["Resources"]
+    Learning Pathways : 
+
+  - title: Arm Education in Conversation with Eben Upton
+    description: |
+    url:
+      - https://www.youtube.com/watch?v=vMGYWD1zoZo
+    subjects: ["VLSI Design","SoC Design","On-chip ML / microcontrollers","Arm architecture & microprocessors","Business model & innovation skills","Soft skills: creativity, problem-solving"]
+    platform: 
+    sw-hw: 
+    level: ["Beginner"]
+    Format: ["Resources"]
+    Learning Pathways : 
