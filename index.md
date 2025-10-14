@@ -12,7 +12,9 @@ publication-date: 2025-07-21
   "courseInformation:courses,
    educationKitInformation:kits,
    otherResorcesInformation:resources,
-   booksInformation:books" | split: "," %} 
+   booksInformation:books,
+   blogs:blogs,
+   workshop:workshop" | split: "," %} 
 
 {% for dataset in datasets %} 
   {% assign pair = dataset | split: ":" %}
@@ -58,31 +60,50 @@ publication-date: 2025-07-21
             <div class="course-grid" id="{{ dataset_key }}-grid">
               {% for course in group.items %}
                 <div class="course-card"
-                  data-keywords="{{ course.subjects | join: ' ' }} {{ course.platform | join: ' ' }} {{ course['sw-hw'] | join: ' ' }} {{ course.level | join: ' ' }} {{ course.publisher | join: ' ' }}  {{ course.Format | join: ' ' }}"
+                  data-keywords="{{ course.subjects | join: ' ' }} {{ course.platform | join: ' ' }} {{ course['sw-hw'] | join: ' ' }} {{ course.level | join: ' ' }} {{ course.publisher | join: ' ' }}  {{ course.Format | join: ' ' }} {{ course["Learning Pathways"]| join: ' ' }}"
                   data-title="{{ course.title | downcase | escape }}"
                   data-description="{{ course.description | strip_html | downcase | escape }}">
 
                   <h3 class="course-title">{{ course.title }}</h3>
-                 {% if course.url %}
-                    {% if course.url contains "[" and course.url contains "http" %}
-                      {# Skip if it's malformed #}
-                    {% elsif course.url.size > 0 and course.url[0] contains "http" %}
-                      {% for link in course.url %}
-                        {% assign domain = link | split: "/" | slice: 2, 1 | first %}
-                        {% assign parts = domain | split: "." | reverse %}
-                        {% assign site_name = parts[1] | capitalize %}
+                  {% if course.Subtitle %}
+                    <p style="font-size: 0.9em; color: #666;">
+                      {{ course.Subtitle }}
+                    </p>
+                  {% endif %}
+                {% if course.url %}
+                  {% if course.url contains "[" and course.url contains "http" %}
+                    {# Skip if it's malformed #}
+                  {% elsif course.url.size > 0 and course.url[0] contains "http" %}
+                    {% for link in course.url %}
+                      {% assign domain = link | split: "/" | slice: 2, 1 | first %}
+                      {% assign parts = domain | split: "." | reverse %}
+                      {% assign site_name = parts[1] | capitalize %}
+
+                      {% if link contains "amazon" %}
+                        <a class="button amazon-button" href="{{ link }}" target="_blank">
+                          Buy from Amazon
+                        </a>
+                      {% else %}
                         <a class="button" href="{{ link }}" target="_blank">
                           Access via {{ site_name }}
                         </a>
-                      {% endfor %}
+                      {% endif %}
+                    {% endfor %}
+                  {% else %}
+                    {% assign domain = course.url | split: "/" | slice: 2, 1 | first %}
+                    {% assign parts = domain | split: "." | reverse %}
+                    {% assign site_name = parts[1] | capitalize %}
+
+                    {% if course.url contains "amazon" %}
+                      <a class="button amazon-button" href="{{ course.url }}" target="_blank">
+                        Buy from Amazon
+                      </a>
                     {% else %}
-                      {% assign domain = course.url | split: "/" | slice: 2, 1 | first %}
-                      {% assign parts = domain | split: "." | reverse %}
-                      {% assign site_name = parts[1] | capitalize %}
                       <a class="button" href="{{ course.url }}" target="_blank">
                         Access via {{ site_name }}
                       </a>
                     {% endif %}
+                  {% endif %}
                 {% endif %}
                 </div>
               {% endfor %}

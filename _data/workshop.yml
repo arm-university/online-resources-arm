@@ -1,0 +1,25 @@
+header:
+  title: Workshop Information Page.
+
+workshop:
+  - title: Explore embedded ML inference on Arm-based microcontrollers
+    description: |
+    url:
+      - https://event.on24.com/wcc/r/4754355/C969B02850957C22DAD22FEA55787A22?partnerref=6851
+    subjects: ["AI fundamentals & types","Machine learning models & inference","Edge deployment techniques","Model compression/pruning/quantisation"]
+    platform: ["Workshop"]
+    sw-hw: 
+    level: ["Beginner"]
+    Format: ["Workshop"]
+    Learning Pathways : ["Machine Learning and AI"]
+
+  - title: Bringing AI to Life on Arm- Practical Edge AI for Engineering Educators Workshop 
+    description: |
+    url:
+      - https://youtube.be/zDvQdsEPvDY?si=LfBNEwPbHVk1FVy-
+    subjects: ["AI fundamentals & types","Machine learning models & inference","Edge deployment techniques","Model compression/pruning/quantisation"]
+    platform: ["Workshop"]
+    sw-hw: 
+    level: ["Beginner"]
+    Format: ["Workshop"]
+    Learning Pathways : ["Machine Learning and AI"]
