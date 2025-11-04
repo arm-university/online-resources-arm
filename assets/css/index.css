@@ -87,3 +87,14 @@ a.button.amazon-button:hover {
   display: inline-block;
   margin-top: 0.5rem;
 }
+
+.donation-button {
+  background-color: #007bff !important; /* bright blue */
+  color: #fff !important;
+  border: none;
+}
+
+.donation-button:hover {
+  background-color: #0069d9 !important;
+  color: #fff !important;
+}

@@ -147,3 +147,14 @@ kits:
     level: ["Beginner"]
     Format: ["Education Kit"]
     Learning Pathways : ["Digital Design and SoC Integration"]
+
+  - title: Arm Development Studio Gold 
+    description: |
+        Arm Development Studio Gold
+    url: https://www.arm.com/resources/education/software-form
+    subjects: ["VLSI Design"]
+    platform: 
+    sw-hw: ["Hardware"]
+    level: ["Beginner"]
+    Format: ["Education Kit"]
+    Learning Pathways : []
