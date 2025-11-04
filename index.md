@@ -70,41 +70,49 @@ publication-date: 2025-07-21
                       {{ course.Subtitle }}
                     </p>
                   {% endif %}
-                {% if course.url %}
-                  {% if course.url contains "[" and course.url contains "http" %}
-                    {# Skip if it's malformed #}
-                  {% elsif course.url.size > 0 and course.url[0] contains "http" %}
-                    {% for link in course.url %}
-                      {% assign domain = link | split: "/" | slice: 2, 1 | first %}
+                  {% if course.url %}
+                    {% if course.url contains "[" and course.url contains "http" %}
+                      {# Skip if it's malformed #}
+                    {% elsif course.url.size > 0 and course.url[0] contains "http" %}
+                      {% for link in course.url %}
+                        {% assign domain = link | split: "/" | slice: 2, 1 | first %}
+                        {% assign parts = domain | split: "." | reverse %}
+                        {% assign site_name = parts[1] | capitalize %}
+
+                        {% if course.title contains "Arm Development Studio" %}
+                          <a class="button donation-button" href="{{ link }}" target="_blank">
+                            Request Donation
+                          </a>
+                        {% elsif link contains "amazon" %}
+                          <a class="button amazon-button" href="{{ link }}" target="_blank">
+                            Buy from Amazon
+                          </a>
+                        {% else %}
+                          <a class="button" href="{{ link }}" target="_blank">
+                            Access via {{ site_name }}
+                          </a>
+                        {% endif %}
+                      {% endfor %}
+                    {% else %}
+                      {% assign domain = course.url | split: "/" | slice: 2, 1 | first %}
                       {% assign parts = domain | split: "." | reverse %}
                       {% assign site_name = parts[1] | capitalize %}
 
-                      {% if link contains "amazon" %}
-                        <a class="button amazon-button" href="{{ link }}" target="_blank">
+                      {% if course.title contains "Arm Development Studio" %}
+                        <a class="button donation-button" href="{{ course.url }}" target="_blank">
+                          Request Donation
+                        </a>
+                      {% elsif course.url contains "amazon" %}
+                        <a class="button amazon-button" href="{{ course.url }}" target="_blank">
                           Buy from Amazon
                         </a>
                       {% else %}
-                        <a class="button" href="{{ link }}" target="_blank">
+                        <a class="button" href="{{ course.url }}" target="_blank">
                           Access via {{ site_name }}
                         </a>
                       {% endif %}
-                    {% endfor %}
-                  {% else %}
-                    {% assign domain = course.url | split: "/" | slice: 2, 1 | first %}
-                    {% assign parts = domain | split: "." | reverse %}
-                    {% assign site_name = parts[1] | capitalize %}
-
-                    {% if course.url contains "amazon" %}
-                      <a class="button amazon-button" href="{{ course.url }}" target="_blank">
-                        Buy from Amazon
-                      </a>
-                    {% else %}
-                      <a class="button" href="{{ course.url }}" target="_blank">
-                        Access via {{ site_name }}
-                      </a>
-                    {% endif %}
-                  {% endif %}
                 {% endif %}
+              {% endif %}
                 </div>
               {% endfor %}
             </div>
