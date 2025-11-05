@@ -2,6 +2,16 @@ header:
   title: Education Kit Information Page.
 
 kits:
+  - title: Arm Development Studio Gold 
+    description: |
+        Arm Development Studio Gold
+    url: https://www.arm.com/resources/education/software-form
+    subjects: ["VLSI Design"]
+    platform: 
+    sw-hw: ["Hardware"]
+    level: ["Beginner"]
+    Format: ["Education Kit"]
+    Learning Pathways : []
   - title: Efficient Embedded Systems Design and Programming 
     description: |
         This education kit focuses on the design and development of modern embedded systems, emphasizing the attributes and constraints inherent to embedded platforms, including limitations on operating systems, programming languages, and the selection of microcontrollers or microprocessors. It offers detailed coverage of the Armv8-M processor architecture, highlighting TrustZone security technology as implemented in Cortex-M33 microcontrollers. Learners gain foundational knowledge in software design and software engineering principles, enabling them to choose appropriate programming techniques based on design requirements. The kit fosters the ability to evaluate implementation outcomes—such as speed, cost, and power consumption—and correlate them with the programming methods used. Through practical exercises, learners will use commercial development tools to build and program Arm-based embedded systems tailored to specific user specifications. They will also develop and execute programs that utilize TrustZone features to manage secure and non-secure I/O operations on Cortex-M33 devices. This hands-on, security-aware approach equips learners with the critical skills required to build efficient, secure, and standards-compliant embedded solutions.
@@ -148,13 +158,3 @@ kits:
     Format: ["Education Kit"]
     Learning Pathways : ["Digital Design and SoC Integration"]
 
-  - title: Arm Development Studio Gold 
-    description: |
-        Arm Development Studio Gold
-    url: https://www.arm.com/resources/education/software-form
-    subjects: ["VLSI Design"]
-    platform: 
-    sw-hw: ["Hardware"]
-    level: ["Beginner"]
-    Format: ["Education Kit"]
-    Learning Pathways : []
